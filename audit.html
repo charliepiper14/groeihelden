@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groeihelden - Strategic Meta Ads Audit & Scaling Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #162642 0%, #1a2d4f 100%);
+            color: white;
+            line-height: 1.5;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #cc5b27;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .main-title {
+            font-size: 3.2em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #cc5b27, #ff7c4c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #cc5b27;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #cc5b27;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #cc5b27;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #cc5b27, #ff7c4c);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        
+        .data-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        
+        .data-table th {
+            background: #cc5b27;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .performance-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .performance-table table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        
+        .performance-table th {
+            background: #2c3e50;
+            padding: 14px 12px;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .performance-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .performance-table td:first-child {
+            text-align: left;
+        }
+        
+        .campaign-lto { background: rgba(76, 175, 80, 0.3); }
+        .campaign-boost { background: rgba(33, 150, 243, 0.3); }
+        .campaign-christmas { background: rgba(233, 30, 99, 0.3); }
+        .campaign-freebie { background: rgba(156, 39, 176, 0.3); }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .bullet-points li:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #cc5b27;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+        
+        .number-list {
+            list-style: none;
+            margin: 15px 0;
+            counter-reset: item;
+        }
+        
+        .number-list li {
+            margin: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .number-list li:before {
+            counter-increment: item;
+            content: counter(item);
+            background: #cc5b27;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .competitor-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(204, 91, 39, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .issue-box {
+            background: rgba(244, 67, 54, 0.2);
+            border: 2px solid #F44336;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .opportunity-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .warning-box {
+            background: rgba(255, 152, 0, 0.2);
+            border: 2px solid #FF9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .tier-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .tier-title {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .roi-visual {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .roi-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            margin: 0 8px;
+        }
+        
+        .arrow {
+            font-size: 1.8em;
+            color: #cc5b27;
+            padding: 0 10px;
+        }
+        
+        .trend-up { color: #4CAF50; }
+        .trend-down { color: #F44336; }
+        .trend-stable { color: #FF9800; }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .status-good { background: #2E7D32; }
+        .status-improving { background: #1565C0; }
+        .status-monitor { background: #FF9800; }
+        .status-critical { background: #C62828; }
+        .status-excellent { background: #2E7D32; }
+        .status-efficient { background: #2E7D32; }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">01</div>
+        </div>
+        <div class="main-title">Groeihelden</div>
+        <div class="subtitle">Strategic Meta Ads Audit & 90-Day Scaling Roadmap</div>
+        
+        <div class="highlight-box">
+            <h3>Full Funnel Analysis: LTO Campaigns | Workshop Campaigns | Lead Generation</h3>
+            <p>Netherlands & Belgium | Testing-to-Scaling Framework | High-Ticket Backend Focus</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">E26,736</span>
+                <div class="stat-label">90-Day Total Spend<br>Active Campaigns</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">795+</span>
+                <div class="stat-label">Total Purchases<br>Across All Campaigns</div>
+            </div>
+            <div class="stat-card" style="border-color: #E91E63;">
+                <span class="stat-number" style="color: #E91E63;">E33.63</span>
+                <div class="stat-label">Average CPR<br>Portfolio Wide</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">3-5%</span>
+                <div class="stat-label">Backend Conversion<br>E3K-E9K Offers</div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div style="font-size: 1.1em; margin-top: 20px;"><strong>Audit Period: September 10 - December 11, 2025 (90 Days)</strong></div>
+            <div style="opacity: 0.8; margin-top: 8px;">Campaign Performance Analysis | CPR Optimization | Creative Strategy | Scaling Framework</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Executive Summary -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">02</div>
+        </div>
+        <div class="section-title">Executive Summary: Critical Findings</div>
+        
+        <div class="issue-box">
+            <div class="tier-title" style="color: #F44336;">CRITICAL ISSUES IDENTIFIED</div>
+            <ul class="bullet-points">
+                <li><strong>CPR Threshold Breaches:</strong> Multiple ad sets running at 4-16x breakeven (E183-E361 CPR vs E66 target)</li>
+                <li><strong>Boost & Convert Overspend:</strong> E1,500 spent at E168 CPR (3.7x above E45 target) before manual intervention</li>
+                <li><strong>Data Discrepancy:</strong> Meta reporting 6 sales vs backend showing only 2 for Christmas Workshop</li>
+                <li><strong>Weekend Monitoring Gaps:</strong> High-spend ads left unmonitored, resulting in significant budget waste</li>
+                <li><strong>Creative Delivery Delays:</strong> B-roll videos, talking heads, and Christmas creatives consistently delayed</li>
+            </ul>
+        </div>
+
+        <div class="opportunity-box">
+            <div class="tier-title" style="color: #4CAF50;">IMMEDIATE OPPORTUNITIES</div>
+            <ul class="bullet-points">
+                <li><strong>Freebie Campaign Excellence:</strong> E6.34 CPR delivering 264 purchases/month - massive scaling potential</li>
+                <li><strong>Top Video Performer:</strong> Tekst 2 - Video Carolien je post je suf at E36.40 CPR (138 purchases)</li>
+                <li><strong>Talking Head 2:</strong> E38.02 CPR with 8.55 ROAS in testing - ready for main campaign</li>
+                <li><strong>LTO Main Campaign:</strong> E35.23 CPR stable performer - within 3x breakeven threshold</li>
+                <li><strong>High-Ticket Backend:</strong> 3-5% conversion on E3K-E9K offers = E9K-E45K revenue per 100 leads</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <div class="tier-title" style="color: #FF9800;">STRATEGIC CHALLENGES</div>
+            <ul class="bullet-points">
+                <li><strong>Creative Fatigue:</strong> NL/BE audience size limited - frequent refreshes essential</li>
+                <li><strong>ABO Structure Complexity:</strong> 15+ ad sets in Boost & Convert causing optimization difficulties</li>
+                <li><strong>Testing-to-Scaling Pipeline:</strong> Winners not being moved to main campaigns fast enough</li>
+                <li><strong>Client Communication:</strong> Expectations around CPR thresholds and monitoring need alignment</li>
+            </ul>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">E6.34</span>
+                <div class="stat-label">Best CPR<br>(Freebie Campaign)</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">E35.23</span>
+                <div class="stat-label">LTO Main CPR<br>(Target: &lt;E66)</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">E56.80</span>
+                <div class="stat-label">Boost & Convert CPR<br>(Target: &lt;E135)</div>
+            </div>
+            <div class="stat-card" style="border-color: #E91E63;">
+                <span class="stat-number" style="color: #E91E63;">E361</span>
+                <div class="stat-label">Worst Ad Set CPR<br>(Critical Issue)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Campaign Performance Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">03</div>
+        </div>
+        <div class="section-title">Campaign Performance Analysis: 90-Day vs 30-Day Trends</div>
+        
+        <div class="performance-table">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 22%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 10%;">
+                    <col style="width: 12%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">Campaign</th>
+                        <th>90-Day Spend</th>
+                        <th>90-Day CPR</th>
+                        <th>30-Day CPR</th>
+                        <th>Trend</th>
+                        <th>3x BE Target</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="campaign-lto">
+                        <td style="text-align: left;"><strong>LTO 22 Trainingen</strong></td>
+                        <td>E5,742</td>
+                        <td>E35.23</td>
+                        <td>E40.94</td>
+                        <td class="trend-down">+16%</td>
+                        <td>E66</td>
+                        <td><span class="status-badge status-good">Within Target</span></td>
+                    </tr>
+                    <tr class="campaign-boost">
+                        <td style="text-align: left;"><strong>Boost & Convert ABO</strong></td>
+                        <td>E6,986</td>
+                        <td>E56.80</td>
+                        <td>E48.58</td>
+                        <td class="trend-up">-14%</td>
+                        <td>E135</td>
+                        <td><span class="status-badge status-improving">Improving</span></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>LTO Testing</strong></td>
+                        <td>E1,686</td>
+                        <td>E41.11</td>
+                        <td>E38.71</td>
+                        <td class="trend-up">-6%</td>
+                        <td>E66</td>
+                        <td><span class="status-badge status-good">Within Target</span></td>
+                    </tr>
+                    <tr class="campaign-christmas">
+                        <td style="text-align: left;"><strong>Clients before Christmas</strong></td>
+                        <td>E1,913</td>
+                        <td>E86.95</td>
+                        <td>E70.22</td>
+                        <td class="trend-up">-19%</td>
+                        <td>E141*</td>
+                        <td><span class="status-badge status-monitor">Monitor</span></td>
+                    </tr>
+                    <tr class="campaign-freebie">
+                        <td style="text-align: left;"><strong>GH Freebie AI</strong></td>
+                        <td>E1,708</td>
+                        <td>E6.42</td>
+                        <td>E6.34</td>
+                        <td class="trend-up">-1%</td>
+                        <td>N/A</td>
+                        <td><span class="status-badge status-excellent">Excellent</span></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Traffic Retargeting</strong></td>
+                        <td>E648</td>
+                        <td>E0.12/LPV</td>
+                        <td>E0.12/LPV</td>
+                        <td class="trend-stable">Stable</td>
+                        <td>N/A</td>
+                        <td><span class="status-badge status-efficient">Efficient</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="font-size: 12px; opacity: 0.7; margin-top: -10px;">*Christmas Workshop at E47 price point = E141 BE target</p>
+
+        <div class="two-column" style="margin-top: 20px;">
+            <div class="competitor-section" style="border-color: #4CAF50;">
+                <h4 style="color: #4CAF50; margin-bottom: 15px;">POSITIVE TRENDS</h4>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Boost & Convert CPR improving 14% month-over-month</li>
+                    <li>Christmas Workshop CPR dropped 19% with ABO structure</li>
+                    <li>LTO Testing identifying winners efficiently at E38.71 CPR</li>
+                    <li>Freebie campaign maintaining excellent E6.34 CPR</li>
+                    <li>Total portfolio conversions: 795+ purchases in 90 days</li>
+                </ul>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #F44336;">
+                <h4 style="color: #F44336; margin-bottom: 15px;">CONCERNING TRENDS</h4>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>LTO Main CPR increased 16% (E35.23 to E40.94)</li>
+                    <li>Several ABO ad sets at 4-16x breakeven</li>
+                    <li>New structure 2.0 campaign at E82.70 CPR (paused)</li>
+                    <li>Workshop campaigns showing inconsistent performance</li>
+                    <li>Meta vs Backend data discrepancy on purchases</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 20px;">
+            <h3>Key Insight: Backend Revenue Potential</h3>
+            <p>795 workshop purchases x 4% high-ticket conversion x E6,000 avg = <strong>E190,800 potential backend revenue</strong></p>
+        </div>
+    </div>
+
+    <!-- Slide 4: Top Performing Ads Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">04</div>
+        </div>
+        <div class="section-title">Top Performing Ads & Creative Analysis</div>
+        
+        <div class="performance-table">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 28%;">
+                    <col style="width: 12%;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">Ad Name</th>
+                        <th>Campaign</th>
+                        <th>Purchases</th>
+                        <th>CPR</th>
+                        <th>ROAS</th>
+                        <th>Format</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;"><strong>Tekst 2 - Video Carolien je post je suf</strong></td>
+                        <td>LTO Main</td>
+                        <td>138</td>
+                        <td style="color: #4CAF50;">E36.40</td>
+                        <td>1.20</td>
+                        <td>Video</td>
+                        <td><strong>SCALE BUDGET</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>18 video</strong></td>
+                        <td>B&C ABO</td>
+                        <td>39</td>
+                        <td style="color: #4CAF50;">E21.80</td>
+                        <td>2.38</td>
+                        <td>Video</td>
+                        <td><strong>SCALE BUDGET</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>15 video</strong></td>
+                        <td>B&C ABO</td>
+                        <td>22</td>
+                        <td style="color: #4CAF50;">E31.72</td>
+                        <td>0.81</td>
+                        <td>Video</td>
+                        <td>Maintain</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Talking head 2</strong></td>
+                        <td>LTO Testing</td>
+                        <td>12</td>
+                        <td style="color: #4CAF50;">E38.02</td>
+                        <td>8.55</td>
+                        <td>Video</td>
+                        <td><strong>MOVE TO MAIN</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>13 static</strong></td>
+                        <td>B&C ABO</td>
+                        <td>17</td>
+                        <td style="color: #4CAF50;">E37.79</td>
+                        <td>0.75</td>
+                        <td>Static</td>
+                        <td>Maintain</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Video 4 - New 2</strong></td>
+                        <td>Christmas</td>
+                        <td>6</td>
+                        <td style="color: #4CAF50;">E35.69</td>
+                        <td>5.60</td>
+                        <td>Video</td>
+                        <td><strong>SCALE BUDGET</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Tekst 2 - Video Carolien Focus</strong></td>
+                        <td>LTO Main</td>
+                        <td>5</td>
+                        <td style="color: #4CAF50;">E17.26</td>
+                        <td>1.27</td>
+                        <td>Video</td>
+                        <td><strong>SCALE BUDGET</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="three-column">
+            <div class="competitor-section" style="border-color: #4CAF50;">
+                <h4 style="color: #4CAF50; margin-bottom: 10px;">VIDEO PERFORMANCE</h4>
+                <div style="font-size: 13px;">
+                    <p><strong>Avg CPR:</strong> E32.45</p>
+                    <p><strong>Total Purchases:</strong> 250+</p>
+                    <p><strong>Best Performer:</strong> Carolien talking head content</p>
+                </div>
+                <div style="margin-top: 10px; padding: 10px; background: rgba(76, 175, 80, 0.2); border-radius: 5px; font-size: 12px;">
+                    <strong>Key Finding:</strong> Video creative outperforms static by 40% on average CPR
+                </div>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #2196F3;">
+                <h4 style="color: #2196F3; margin-bottom: 10px;">STATIC PERFORMANCE</h4>
+                <div style="font-size: 13px;">
+                    <p><strong>Avg CPR:</strong> E54.20</p>
+                    <p><strong>Total Purchases:</strong> 45+</p>
+                    <p><strong>Best Performer:</strong> 13 static at E37.79</p>
+                </div>
+                <div style="margin-top: 10px; padding: 10px; background: rgba(33, 150, 243, 0.2); border-radius: 5px; font-size: 12px;">
+                    <strong>Key Finding:</strong> Static works best for retargeting and social proof angles
+                </div>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #9C27B0;">
+                <h4 style="color: #9C27B0; margin-bottom: 10px;">CAROUSEL PERFORMANCE</h4>
+                <div style="font-size: 13px;">
+                    <p><strong>Avg CPR:</strong> E48.90</p>
+                    <p><strong>Total Purchases:</strong> 25+</p>
+                    <p><strong>Best Performer:</strong> Workshop carousels</p>
+                </div>
+                <div style="margin-top: 10px; padding: 10px; background: rgba(156, 39, 176, 0.2); border-radius: 5px; font-size: 12px;">
+                    <strong>Key Finding:</strong> Best for showcasing multiple benefits/testimonials
+                </div>
+            </div>
+        </div>
+
+        <div class="opportunity-box" style="margin-top: 20px;">
+            <div class="tier-title">CREATIVE INSIGHTS & RECOMMENDATIONS</div>
+            <ul class="bullet-points" style="font-size: 13px;">
+                <li><strong>Carolien's talking head videos are your top performers</strong> - prioritize creating more variations</li>
+                <li><strong>UGC-style content</strong> (Tekst 2 - UCG 6) showing promise at E44.34 CPR - continue testing</li>
+                <li><strong>B-roll compilation videos</strong> underperforming - consider discontinuing or refreshing</li>
+                <li><strong>Social proof angle</strong> needs optimization - current E268.88 CPR is unacceptable</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 5: Problem Ad Sets & Waste Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">05</div>
+        </div>
+        <div class="section-title">Budget Waste Analysis: Underperforming Ad Sets</div>
+        
+        <div class="issue-box">
+            <div class="tier-title" style="color: #F44336;">CRITICAL: AD SETS EXCEEDING 3X BREAKEVEN</div>
+        </div>
+
+        <div class="performance-table">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">Ad Set</th>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPR</th>
+                        <th>vs Target</th>
+                        <th>Action Required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(244, 67, 54, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set 4</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E361.30</td>
+                        <td>1</td>
+                        <td style="color: #F44336; font-weight: bold;">E361.30</td>
+                        <td>16.4x BE</td>
+                        <td><strong>PAUSE IMMEDIATELY</strong></td>
+                    </tr>
+                    <tr style="background: rgba(244, 67, 54, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set | Social Proof</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E537.75</td>
+                        <td>2</td>
+                        <td style="color: #F44336; font-weight: bold;">E268.88</td>
+                        <td>6.0x BE</td>
+                        <td><strong>PAUSE IMMEDIATELY</strong></td>
+                    </tr>
+                    <tr style="background: rgba(244, 67, 54, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set 9</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E273.67</td>
+                        <td>1</td>
+                        <td style="color: #F44336; font-weight: bold;">E273.67</td>
+                        <td>6.1x BE</td>
+                        <td><strong>PAUSE IMMEDIATELY</strong></td>
+                    </tr>
+                    <tr style="background: rgba(255, 152, 0, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set 2</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E367.90</td>
+                        <td>2</td>
+                        <td style="color: #FF9800; font-weight: bold;">E183.95</td>
+                        <td>4.1x BE</td>
+                        <td><strong>PAUSE & REVIEW</strong></td>
+                    </tr>
+                    <tr style="background: rgba(255, 152, 0, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set 3</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E358.41</td>
+                        <td>2</td>
+                        <td style="color: #FF9800; font-weight: bold;">E179.21</td>
+                        <td>4.0x BE</td>
+                        <td><strong>PAUSE & REVIEW</strong></td>
+                    </tr>
+                    <tr style="background: rgba(255, 152, 0, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set 7</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E537.35</td>
+                        <td>3</td>
+                        <td style="color: #FF9800; font-weight: bold;">E179.12</td>
+                        <td>4.0x BE</td>
+                        <td><strong>PAUSE & REVIEW</strong></td>
+                    </tr>
+                    <tr style="background: rgba(255, 152, 0, 0.3);">
+                        <td style="text-align: left;"><strong>Ad set 6</strong></td>
+                        <td>B&C ABO</td>
+                        <td>E447.94</td>
+                        <td>3</td>
+                        <td style="color: #FF9800; font-weight: bold;">E149.31</td>
+                        <td>3.3x BE</td>
+                        <td><strong>MONITOR CLOSELY</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="two-column" style="margin-top: 20px;">
+            <div class="issue-box">
+                <div class="tier-title" style="color: #F44336;">TOTAL BUDGET WASTE CALCULATION</div>
+                <div style="font-size: 14px; margin-top: 10px;">
+                    <p><strong>Ad Sets &gt;3x Breakeven:</strong> E2,884.32 spent</p>
+                    <p><strong>Purchases Generated:</strong> 14</p>
+                    <p><strong>Actual CPR:</strong> E206.02</p>
+                    <p><strong>Target CPR:</strong> E45 (Boost & Convert)</p>
+                    <p style="margin-top: 10px; color: #F44336;"><strong>Excess Spend:</strong> E2,254.32 (E206.02 - E45) x 14</p>
+                </div>
+                <div style="margin-top: 15px; padding: 10px; background: rgba(244, 67, 54, 0.3); border-radius: 5px;">
+                    <strong>Impact:</strong> This budget could have generated 50+ additional purchases at target CPR
+                </div>
+            </div>
+            
+            <div class="opportunity-box">
+                <div class="tier-title">IMMEDIATE ACTIONS</div>
+                <ul class="bullet-points" style="font-size: 13px;">
+                    <li><strong>Pause all ad sets &gt;3x breakeven immediately</strong></li>
+                    <li><strong>Implement automated rules:</strong> Pause when CPR exceeds 2.5x BE after E100 spend</li>
+                    <li><strong>Daily monitoring:</strong> Check all ad sets every 24 hours</li>
+                    <li><strong>Weekend coverage:</strong> Establish weekend monitoring protocol</li>
+                    <li><strong>Consolidate ABO structure:</strong> Too many ad sets diluting optimization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #F44336;">
+                <span class="stat-number" style="color: #F44336;">E2,884</span>
+                <div class="stat-label">Total Spent on<br>&gt;3x BE Ad Sets</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">7</span>
+                <div class="stat-label">Ad Sets Requiring<br>Immediate Action</div>
+            </div>
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">50+</span>
+                <div class="stat-label">Potential Lost<br>Purchases</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">15</span>
+                <div class="stat-label">Active ABO Ad Sets<br>(Reduce to 5-7)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Funnel Economics & Backend Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">06</div>
+        </div>
+        <div class="section-title">Funnel Economics & Backend Revenue Analysis</div>
+        
+        <div class="highlight-box">
+            <h3>The Full Picture: Why CPR Alone Does Not Tell The Story</h3>
+            <p>Frontend breakeven + Backend high-ticket = Profitable funnel at higher CPRs</p>
+        </div>
+
+        <div class="roi-visual">
+            <div class="roi-box" style="border: 2px solid #4CAF50;">
+                <h4 style="color: #4CAF50;">100 Workshop Buyers</h4>
+                <div style="font-size: 24px; margin: 10px 0;">E22-E47 each</div>
+                <div style="font-size: 12px;">Frontend Revenue: E2,200-E4,700</div>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="roi-box" style="border: 2px solid #2196F3;">
+                <h4 style="color: #2196F3;">3-5 High-Ticket Sales</h4>
+                <div style="font-size: 24px; margin: 10px 0;">3-5% Convert</div>
+                <div style="font-size: 12px;">Qualification to Strategy Call</div>
+            </div>
+            <div class="arrow">&rarr;</div>
+            <div class="roi-box" style="border: 2px solid #cc5b27;">
+                <h4 style="color: #cc5b27;">E9K-E45K Revenue</h4>
+                <div style="font-size: 24px; margin: 10px 0;">E3K-E9K offers</div>
+                <div style="font-size: 12px;">Backend Profit Center</div>
+            </div>
+        </div>
+
+        <div class="performance-table">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 16%;">
+                    <col style="width: 18%;">
+                    <col style="width: 16%;">
+                    <col style="width: 16%;">
+                    <col style="width: 18%;">
+                    <col style="width: 16%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>CPR Scenario</th>
+                        <th>Ad Spend for 100 Leads</th>
+                        <th>Frontend Revenue</th>
+                        <th>Frontend P/L</th>
+                        <th>Backend Revenue (4%)</th>
+                        <th>Total Profit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(76, 175, 80, 0.2);">
+                        <td><strong>E22 CPR</strong></td>
+                        <td>E2,200</td>
+                        <td>E2,200</td>
+                        <td style="color: #4CAF50;">E0 (BE)</td>
+                        <td>E24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">E24,000</td>
+                    </tr>
+                    <tr style="background: rgba(76, 175, 80, 0.2);">
+                        <td><strong>E35 CPR (Current)</strong></td>
+                        <td>E3,500</td>
+                        <td>E2,200</td>
+                        <td style="color: #F44336;">-E1,300</td>
+                        <td>E24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">E22,700</td>
+                    </tr>
+                    <tr style="background: rgba(255, 152, 0, 0.2);">
+                        <td><strong>E50 CPR</strong></td>
+                        <td>E5,000</td>
+                        <td>E2,200</td>
+                        <td style="color: #F44336;">-E2,800</td>
+                        <td>E24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">E21,200</td>
+                    </tr>
+                    <tr style="background: rgba(255, 152, 0, 0.2);">
+                        <td><strong>E66 CPR (3x BE)</strong></td>
+                        <td>E6,600</td>
+                        <td>E2,200</td>
+                        <td style="color: #F44336;">-E4,400</td>
+                        <td>E24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">E19,600</td>
+                    </tr>
+                    <tr style="background: rgba(244, 67, 54, 0.2);">
+                        <td><strong>E90 CPR</strong></td>
+                        <td>E9,000</td>
+                        <td>E2,200</td>
+                        <td style="color: #F44336;">-E6,800</td>
+                        <td>E24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">E17,200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="two-column" style="margin-top: 20px;">
+            <div class="warning-box">
+                <div class="tier-title" style="color: #FF9800;">IMPORTANT CONSIDERATION</div>
+                <p style="font-size: 13px;">While backend economics show profitability even at higher CPRs, the <strong>3x breakeven rule</strong> exists for good reason:</p>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Provides buffer for campaign fluctuations</li>
+                    <li>Ensures cash flow sustainability</li>
+                    <li>Maintains optimization discipline</li>
+                    <li>Protects against algorithm changes</li>
+                </ul>
+            </div>
+            
+            <div class="tier-box">
+                <div class="tier-title">RECOMMENDED CPR THRESHOLDS</div>
+                <ul class="bullet-points" style="font-size: 13px;">
+                    <li><strong>E22 LTO:</strong> Target E35, Max E66 (3x BE)</li>
+                    <li><strong>E45 Workshop:</strong> Target E60, Max E135 (3x BE)</li>
+                    <li><strong>E47 Christmas:</strong> Target E65, Max E141 (3x BE)</li>
+                    <li><strong>Freebie:</strong> Target &lt;E10 (lead gen focus)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Campaign Structure Issues -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">07</div>
+        </div>
+        <div class="section-title">Campaign Structure Analysis & Optimization Opportunities</div>
+        
+        <div class="issue-box">
+            <div class="tier-title" style="color: #F44336;">STRUCTURAL PROBLEMS IDENTIFIED</div>
+            <ul class="bullet-points">
+                <li><strong>ABO Fragmentation:</strong> 15+ ad sets in Boost & Convert causing budget dilution and inconsistent optimization</li>
+                <li><strong>Testing Pipeline Bottleneck:</strong> Winners sitting in testing campaign too long before moving to main</li>
+                <li><strong>Duplicate Campaign Purpose:</strong> Multiple LTO campaigns with overlapping objectives</li>
+                <li><strong>Inconsistent Naming Conventions:</strong> Makes performance tracking and reporting difficult</li>
+                <li><strong>No Clear Creative Testing Framework:</strong> Ad variations not being systematically tested</li>
+            </ul>
+        </div>
+
+        <div class="three-column">
+            <div class="competitor-section" style="border-color: #4CAF50;">
+                <h4 style="color: #4CAF50;">WHAT IS WORKING</h4>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li><strong>Testing to Scaling Framework:</strong> Concept is sound, execution needs improvement</li>
+                    <li><strong>Advantage+ Targeting:</strong> Allowing Meta to optimize audience</li>
+                    <li><strong>Video-First Approach:</strong> Top performers are all video content</li>
+                    <li><strong>NL/BE Focus:</strong> Geographic targeting is appropriate</li>
+                    <li><strong>Traffic Retargeting:</strong> Efficient E0.12/LPV building audiences</li>
+                </ul>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #FF9800;">
+                <h4 style="color: #FF9800;">NEEDS IMPROVEMENT</h4>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li><strong>ABO Structure:</strong> Consolidate from 15 to 5-7 ad sets</li>
+                    <li><strong>Budget Distribution:</strong> Winners not receiving enough spend</li>
+                    <li><strong>Creative Refresh Rate:</strong> Fatigue setting in on NL/BE audience</li>
+                    <li><strong>Testing Velocity:</strong> Move winners to main within 7 days</li>
+                    <li><strong>Monitoring Frequency:</strong> Need daily checks, including weekends</li>
+                </ul>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #F44336;">
+                <h4 style="color: #F44336;">CRITICAL FIXES</h4>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li><strong>Automated Rules:</strong> Implement CPR-based auto-pause rules</li>
+                    <li><strong>Naming Convention:</strong> Standardize across all campaigns</li>
+                    <li><strong>Conversion Tracking:</strong> Verify Meta vs Backend alignment</li>
+                    <li><strong>Budget Caps:</strong> Implement daily/weekly spend limits</li>
+                    <li><strong>Creative Pipeline:</strong> Establish 2-week ahead production</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="performance-table" style="margin-top: 20px;">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 25%;">
+                    <col style="width: 25%;">
+                    <col style="width: 25%;">
+                    <col style="width: 25%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">Current Structure</th>
+                        <th>Issues</th>
+                        <th>Proposed Structure</th>
+                        <th>Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;"><strong>LTO Testing Campaign</strong></td>
+                        <td>Winners not graduating fast enough</td>
+                        <td><strong>LTO Testing (7-day max)</strong></td>
+                        <td>Faster iteration, clearer KPIs</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>LTO Main Campaign</strong></td>
+                        <td>CPR creeping up (E35 to E41)</td>
+                        <td><strong>LTO Winners (Scale)</strong></td>
+                        <td>Only proven ads, higher budgets</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>B&C ABO (15 ad sets)</strong></td>
+                        <td>Budget fragmentation, waste</td>
+                        <td><strong>B&C ABO (5-7 ad sets)</strong></td>
+                        <td>Better optimization, clearer data</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Multiple Workshop Campaigns</strong></td>
+                        <td>Overlapping objectives</td>
+                        <td><strong>Unified Workshop Campaign</strong></td>
+                        <td>Consolidated reporting, efficiency</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Slide 8: 30-Day Action Plan -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">08</div>
+        </div>
+        <div class="section-title">30-Day Action Plan: Emergency Stabilization</div>
+        
+        <div class="two-column">
+            <div>
+                <div class="issue-box">
+                    <div class="tier-title" style="color: #F44336;">WEEK 1: EMERGENCY FIXES</div>
+                    <ul class="number-list" style="font-size: 13px;">
+                        <li>Pause all 7 ad sets exceeding 3x breakeven (saves approx E2,254 in waste)</li>
+                        <li>Implement automated CPR monitoring rules in Ads Manager</li>
+                        <li>Verify conversion tracking: resolve Meta vs Backend discrepancy</li>
+                        <li>Move Talking Head 2 from testing to main campaign</li>
+                        <li>Scale Carolien video creative budget by 30%</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">WEEK 2: STRUCTURE OPTIMIZATION</div>
+                    <ul class="number-list" style="font-size: 13px;">
+                        <li>Consolidate ABO from 15 to 5-7 ad sets</li>
+                        <li>Establish standardized naming conventions</li>
+                        <li>Create testing-to-main migration protocol (7-day max)</li>
+                        <li>Set up daily monitoring dashboard</li>
+                        <li>Implement weekend monitoring schedule</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="tier-box">
+                    <div class="tier-title">WEEKS 3-4: CREATIVE & SCALING</div>
+                    <ul class="number-list" style="font-size: 13px;">
+                        <li>Launch 3-5 new Carolien talking head variations</li>
+                        <li>Test 2-3 new UGC-style creatives</li>
+                        <li>Refresh social proof angle with new testimonials</li>
+                        <li>Evaluate LTO workshop fatigue - consider pause/refresh</li>
+                        <li>Begin scaling Freebie campaign if lead quality confirmed</li>
+                    </ul>
+                </div>
+                
+                <div class="opportunity-box">
+                    <div class="tier-title">SUCCESS METRICS (30-DAY)</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>LTO CPR:</strong> Reduce from E40.94 to &lt;E38</li>
+                        <li><strong>B&C CPR:</strong> Maintain &lt;E55</li>
+                        <li><strong>Budget Waste:</strong> Reduce from E2,884 to E0</li>
+                        <li><strong>Total Purchases:</strong> 150+ per month</li>
+                        <li><strong>Creative Pipeline:</strong> 2-week inventory maintained</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">E6,000</span>
+                <div class="stat-label">Target Monthly Spend<br>(Controlled Scale)</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">&lt;E40</span>
+                <div class="stat-label">Target LTO CPR<br>(vs E40.94 current)</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">5-7</span>
+                <div class="stat-label">Target ABO Ad Sets<br>(vs 15 current)</div>
+            </div>
+            <div class="stat-card" style="border-color: #9C27B0;">
+                <span class="stat-number" style="color: #9C27B0;">150+</span>
+                <div class="stat-label">Target Monthly<br>Purchases</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: 90-Day Scaling Roadmap -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">09</div>
+        </div>
+        <div class="section-title">90-Day Scaling Roadmap</div>
+        
+        <div class="three-column">
+            <div class="tier-box" style="border-color: #4CAF50;">
+                <div class="tier-title" style="color: #4CAF50;">MONTH 1: STABILIZATION</div>
+                <div style="background: rgba(76, 175, 80, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <strong>Daily Budget:</strong> E200/day (E6,000/month)
+                </div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Emergency fixes complete</li>
+                    <li>CPR monitoring automated</li>
+                    <li>ABO consolidated</li>
+                    <li>Creative pipeline established</li>
+                    <li>Weekend monitoring active</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 8px; background: rgba(76, 175, 80, 0.2); border-radius: 5px; font-size: 11px;">
+                    <strong>Target:</strong> E38 CPR | 150 purchases
+                </div>
+            </div>
+            
+            <div class="tier-box" style="border-color: #2196F3;">
+                <div class="tier-title" style="color: #2196F3;">MONTH 2: OPTIMIZATION</div>
+                <div style="background: rgba(33, 150, 243, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <strong>Daily Budget:</strong> E250-300/day (E7,500-9,000/month)
+                </div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Scale winning creatives</li>
+                    <li>Expand creative testing</li>
+                    <li>Audience expansion tests</li>
+                    <li>Funnel optimization</li>
+                    <li>Backend conversion tracking</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 8px; background: rgba(33, 150, 243, 0.2); border-radius: 5px; font-size: 11px;">
+                    <strong>Target:</strong> E36 CPR | 200 purchases
+                </div>
+            </div>
+            
+            <div class="tier-box" style="border-color: #9C27B0;">
+                <div class="tier-title" style="color: #9C27B0;">MONTH 3: SCALE</div>
+                <div style="background: rgba(156, 39, 176, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <strong>Daily Budget:</strong> E300-400/day (E9,000-12,000/month)
+                </div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Full scaling of winners</li>
+                    <li>New product launches</li>
+                    <li>Seasonal campaigns</li>
+                    <li>Advanced audience strategies</li>
+                    <li>Process documentation</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 8px; background: rgba(156, 39, 176, 0.2); border-radius: 5px; font-size: 11px;">
+                    <strong>Target:</strong> E35 CPR | 300 purchases
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 20px;">
+            <h3>90-Day Projection: 650+ Purchases</h3>
+            <div class="two-column" style="text-align: left; margin-top: 15px;">
+                <div>
+                    <p><strong>Total Ad Spend:</strong> E22,500-27,000</p>
+                    <p><strong>Total Purchases:</strong> 650+</p>
+                    <p><strong>Average CPR:</strong> E35-38</p>
+                </div>
+                <div>
+                    <p><strong>High-Ticket Conversions (4%):</strong> 26</p>
+                    <p><strong>Backend Revenue:</strong> E156,000 (at E6K avg)</p>
+                    <p><strong>Potential ROI:</strong> 5.8x-6.9x</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="performance-table" style="margin-top: 20px;">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Focus</th>
+                        <th>Budget</th>
+                        <th>Expected Purchases</th>
+                        <th>Risk Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Month 1</strong></td>
+                        <td>Stabilization & Fixes</td>
+                        <td>E6,000</td>
+                        <td>150</td>
+                        <td style="color: #4CAF50;">Low</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Month 2</strong></td>
+                        <td>Optimization & Testing</td>
+                        <td>E7,500-9,000</td>
+                        <td>200</td>
+                        <td style="color: #FF9800;">Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Month 3</strong></td>
+                        <td>Scale & Systemize</td>
+                        <td>E9,000-12,000</td>
+                        <td>300</td>
+                        <td style="color: #FF9800;">Medium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Slide 10: Communication Protocol -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">10</div>
+        </div>
+        <div class="section-title">Communication Protocol & Reporting Framework</div>
+        
+        <div class="three-column">
+            <div class="tier-box" style="border-color: #4CAF50;">
+                <div class="tier-title" style="color: #4CAF50;">DAILY REPORTING</div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Campaign CPR vs targets</li>
+                    <li>Any budget changes made</li>
+                    <li>Ads paused or launched</li>
+                    <li>Issues flagged immediately</li>
+                    <li>Weekend updates included</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 8px; background: rgba(76, 175, 80, 0.2); border-radius: 5px; font-size: 11px;">
+                    <strong>Format:</strong> Brief Slack update by EOD
+                </div>
+            </div>
+            
+            <div class="tier-box" style="border-color: #2196F3;">
+                <div class="tier-title" style="color: #2196F3;">WEEKLY SUMMARY</div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>7-day spend by campaign</li>
+                    <li>CPR vs targets table</li>
+                    <li>Top 3 and bottom 3 performers</li>
+                    <li>Creative pipeline status</li>
+                    <li>Recommendations for next week</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 8px; background: rgba(33, 150, 243, 0.2); border-radius: 5px; font-size: 11px;">
+                    <strong>Format:</strong> Structured Slack update every Monday
+                </div>
+            </div>
+            
+            <div class="tier-box" style="border-color: #9C27B0;">
+                <div class="tier-title" style="color: #9C27B0;">MONTHLY REVIEW</div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>Full performance deck</li>
+                    <li>30-day trends analysis</li>
+                    <li>Budget allocation review</li>
+                    <li>Creative learnings documentation</li>
+                    <li>Next month strategy alignment</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 8px; background: rgba(156, 39, 176, 0.2); border-radius: 5px; font-size: 11px;">
+                    <strong>Format:</strong> Video call + slide presentation
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column" style="margin-top: 20px;">
+            <div class="issue-box">
+                <div class="tier-title" style="color: #F44336;">ESCALATION TRIGGERS</div>
+                <ul class="bullet-points" style="font-size: 13px;">
+                    <li><strong>Immediate Alert:</strong> Any ad set exceeding 2.5x BE after E100 spend</li>
+                    <li><strong>Same Day Response:</strong> CPR trending &gt;20% above target for 48 hours</li>
+                    <li><strong>Weekly Review:</strong> Any campaign consistently above target CPR</li>
+                    <li><strong>Creative Emergency:</strong> All ads in campaign declining performance</li>
+                </ul>
+            </div>
+            
+            <div class="opportunity-box">
+                <div class="tier-title">APPROVAL PROTOCOLS</div>
+                <ul class="bullet-points" style="font-size: 13px;">
+                    <li><strong>Budget Increases:</strong> Can increase daily by 20% if within CPR targets</li>
+                    <li><strong>New Creatives:</strong> Share in Slack for approval before launch</li>
+                    <li><strong>Pausing Ads:</strong> Can pause without approval if &gt;3x BE</li>
+                    <li><strong>New Campaigns:</strong> Require pre-launch approval and strategy alignment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="performance-table" style="margin-top: 20px;">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 25%;">
+                    <col style="width: 25%;">
+                    <col style="width: 25%;">
+                    <col style="width: 25%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="background: #cc5b27;">Metric</th>
+                        <th>Green (Good)</th>
+                        <th>Yellow (Monitor)</th>
+                        <th>Red (Action)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;"><strong>LTO CPR (E22 product)</strong></td>
+                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;E40</td>
+                        <td style="background: rgba(255, 152, 0, 0.3);">E40-E55</td>
+                        <td style="background: rgba(244, 67, 54, 0.3);">E66 (3x BE)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Workshop CPR (E45 product)</strong></td>
+                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;E60</td>
+                        <td style="background: rgba(255, 152, 0, 0.3);">E60-E100</td>
+                        <td style="background: rgba(244, 67, 54, 0.3);">E135 (3x BE)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Daily Spend Pacing</strong></td>
+                        <td style="background: rgba(76, 175, 80, 0.3);">Within 10% of target</td>
+                        <td style="background: rgba(255, 152, 0, 0.3);">10-20% variance</td>
+                        <td style="background: rgba(244, 67, 54, 0.3);">&gt;20% variance</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Creative Fatigue (Frequency)</strong></td>
+                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;2.0</td>
+                        <td style="background: rgba(255, 152, 0, 0.3);">2.0-3.0</td>
+                        <td style="background: rgba(244, 67, 54, 0.3);">&gt;3.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Slide 11: Final Recommendations -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">11</div>
+        </div>
+        <div class="main-title" style="font-size: 2.5em;">Strategic Recommendations Summary</div>
+        <div class="subtitle">Immediate Actions & Growth Path Forward</div>
+        
+        <div class="highlight-box">
+            <h3>Core Objective: 100 Leads/Month at Frontend Breakeven | Profitable Backend</h3>
+            <div class="two-column" style="text-align: left;">
+                <div>
+                    <ul class="bullet-points">
+                        <li>Pause all ad sets exceeding 3x breakeven immediately</li>
+                        <li>Implement automated CPR monitoring rules</li>
+                        <li>Move Talking Head 2 to main campaign (E38 CPR, 8.55 ROAS)</li>
+                        <li>Scale Carolien video creative (+30% budget)</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="bullet-points">
+                        <li>Consolidate ABO from 15 to 5-7 ad sets</li>
+                        <li>Establish daily reporting protocol (including weekends)</li>
+                        <li>Verify Meta vs Backend conversion tracking alignment</li>
+                        <li>Create 2-week creative pipeline for continuous testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="performance-table">
+            <table style="table-layout: fixed; width: 100%;">
+                <colgroup>
+                    <col style="width: 24%;">
+                    <col style="width: 16%;">
+                    <col style="width: 16%;">
+                    <col style="width: 20%;">
+                    <col style="width: 24%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="background: #cc5b27; text-align: left;">Performance Metric</th>
+                        <th>Current State</th>
+                        <th>Month 1 Target</th>
+                        <th>Month 3 Target</th>
+                        <th>Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;"><strong>Portfolio CPR</strong></td>
+                        <td>E33.63</td>
+                        <td>E38.00</td>
+                        <td>E35.00</td>
+                        <td style="color: #4CAF50;"><strong>+4% improvement</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Monthly Purchases</strong></td>
+                        <td>265 approx</td>
+                        <td>150 approx</td>
+                        <td>300 approx</td>
+                        <td style="color: #4CAF50;"><strong>+13% growth</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Monthly Ad Spend</strong></td>
+                        <td>E6,000</td>
+                        <td>E6,000</td>
+                        <td>E10,500</td>
+                        <td style="color: #4CAF50;"><strong>+75% scale</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>LTO Campaign CPR</strong></td>
+                        <td>E40.94</td>
+                        <td>E38.00</td>
+                        <td>E35.00</td>
+                        <td style="color: #4CAF50;"><strong>-14% reduction</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>B&C Campaign CPR</strong></td>
+                        <td>E48.58</td>
+                        <td>E45.00</td>
+                        <td>E40.00</td>
+                        <td style="color: #4CAF50;"><strong>-18% reduction</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>Budget Waste (&gt;3x BE)</strong></td>
+                        <td>E2,884</td>
+                        <td>E0</td>
+                        <td>E0</td>
+                        <td style="color: #4CAF50;"><strong>-100% eliminated</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">650+</span>
+                <div class="stat-label">90-Day Purchase Target<br>(Across All Campaigns)</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">26</span>
+                <div class="stat-label">Expected High-Ticket<br>Conversions (4%)</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">E156K</span>
+                <div class="stat-label">Potential Backend<br>Revenue</div>
+            </div>
+            <div class="stat-card" style="border-color: #9C27B0;">
+                <span class="stat-number" style="color: #9C27B0;">E35</span>
+                <div class="stat-label">Target Portfolio CPR<br>(Month 3)</div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div style="font-size: 1.4em; margin-bottom: 20px;">
+                <strong>NEXT STEPS: APPROVED FOR IMMEDIATE IMPLEMENTATION</strong>
+            </div>
+            <div style="font-size: 1.1em;">
+                Phase 1: Emergency fixes (Week 1) | Phase 2: Structure optimization (Week 2-3) | Phase 3: Scale winners (Week 4+)<br>
+                <strong>Business Model: Frontend breakeven | 3-5% backend conversion | E3K-E9K offers</strong><br>
+                <strong>Key Success Factor: Disciplined CPR management + consistent creative pipeline + proactive communication</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
