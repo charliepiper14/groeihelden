@@ -145,12 +145,34 @@
             padding: 12px;
             font-weight: bold;
             font-size: 14px;
+            text-align: center;
+            vertical-align: middle;
+            height: 48px;
+            line-height: 1.3;
         }
         
         .data-table td {
             padding: 10px 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 13px;
+            text-align: center;
+            vertical-align: middle;
+            height: 48px;
+            line-height: 1.3;
+        }
+        
+        .data-table th:first-child {
+            text-align: left;
+            padding-left: 16px;
+        }
+        
+        .data-table td:first-child {
+            text-align: left;
+            padding-left: 16px;
+        }
+        
+        .data-table tr {
+            height: 48px;
         }
         
         .data-table tr:nth-child(even) {
@@ -177,6 +199,8 @@
             font-size: 13px;
             text-align: center;
             vertical-align: middle;
+            height: 48px;
+            line-height: 1.3;
         }
         
         .performance-table td {
@@ -185,10 +209,22 @@
             font-size: 13px;
             text-align: center;
             vertical-align: middle;
+            height: 48px;
+            line-height: 1.3;
         }
         
         .performance-table td:first-child {
             text-align: left;
+            padding-left: 16px;
+        }
+        
+        .performance-table th:first-child {
+            text-align: left;
+            padding-left: 16px;
+        }
+        
+        .performance-table tr {
+            height: 48px;
         }
         
         .campaign-lto { background: rgba(76, 175, 80, 0.3); }
@@ -337,12 +373,12 @@
             text-transform: uppercase;
         }
         
-        .status-good { background: #2E7D32; }
+        .status-good { background: #2€7D32; }
         .status-improving { background: #1565C0; }
         .status-monitor { background: #FF9800; }
         .status-critical { background: #C62828; }
-        .status-excellent { background: #2E7D32; }
-        .status-efficient { background: #2E7D32; }
+        .status-excellent { background: #2€7D32; }
+        .status-efficient { background: #2€7D32; }
     </style>
 </head>
 <body>
@@ -362,7 +398,7 @@
         
         <div class="stats-grid">
             <div class="stat-card" style="border-color: #4CAF50;">
-                <span class="stat-number" style="color: #4CAF50;">E26,736</span>
+                <span class="stat-number" style="color: #4CAF50;">€26,736</span>
                 <div class="stat-label">90-Day Total Spend<br>Active Campaigns</div>
             </div>
             <div class="stat-card" style="border-color: #2196F3;">
@@ -370,12 +406,12 @@
                 <div class="stat-label">Total Purchases<br>Across All Campaigns</div>
             </div>
             <div class="stat-card" style="border-color: #E91E63;">
-                <span class="stat-number" style="color: #E91E63;">E33.63</span>
+                <span class="stat-number" style="color: #E91E63;">€33.63</span>
                 <div class="stat-label">Average CPR<br>Portfolio Wide</div>
             </div>
             <div class="stat-card">
                 <span class="stat-number">3-5%</span>
-                <div class="stat-label">Backend Conversion<br>E3K-E9K Offers</div>
+                <div class="stat-label">Backend Conversion<br>€3K-€9K Offers</div>
             </div>
         </div>
         
@@ -396,8 +432,8 @@
         <div class="issue-box">
             <div class="tier-title" style="color: #F44336;">CRITICAL ISSUES IDENTIFIED</div>
             <ul class="bullet-points">
-                <li><strong>CPR Threshold Breaches:</strong> Multiple ad sets running at 4-16x breakeven (E183-E361 CPR vs E66 target)</li>
-                <li><strong>Boost & Convert Overspend:</strong> E1,500 spent at E168 CPR (3.7x above E45 target) before manual intervention</li>
+                <li><strong>CPR Threshold Breaches:</strong> Multiple ad sets running at 4-16x breakeven (€183-€361 CPR vs €66 target)</li>
+                <li><strong>Boost & Convert Overspend:</strong> €1,500 spent at €168 CPR (3.7x above €45 target) before manual intervention</li>
                 <li><strong>Data Discrepancy:</strong> Meta reporting 6 sales vs backend showing only 2 for Christmas Workshop</li>
                 <li><strong>Weekend Monitoring Gaps:</strong> High-spend ads left unmonitored, resulting in significant budget waste</li>
                 <li><strong>Creative Delivery Delays:</strong> B-roll videos, talking heads, and Christmas creatives consistently delayed</li>
@@ -407,11 +443,11 @@
         <div class="opportunity-box">
             <div class="tier-title" style="color: #4CAF50;">IMMEDIATE OPPORTUNITIES</div>
             <ul class="bullet-points">
-                <li><strong>Freebie Campaign Excellence:</strong> E6.34 CPR delivering 264 purchases/month - massive scaling potential</li>
-                <li><strong>Top Video Performer:</strong> Tekst 2 - Video Carolien je post je suf at E36.40 CPR (138 purchases)</li>
-                <li><strong>Talking Head 2:</strong> E38.02 CPR with 8.55 ROAS in testing - ready for main campaign</li>
-                <li><strong>LTO Main Campaign:</strong> E35.23 CPR stable performer - within 3x breakeven threshold</li>
-                <li><strong>High-Ticket Backend:</strong> 3-5% conversion on E3K-E9K offers = E9K-E45K revenue per 100 leads</li>
+                <li><strong>Freebie Campaign Excellence:</strong> €6.34 CPR delivering 264 purchases/month - massive scaling potential</li>
+                <li><strong>Top Video Performer:</strong> Tekst 2 - Video Carolien je post je suf at €36.40 CPR (138 purchases)</li>
+                <li><strong>Talking Head 2:</strong> €38.02 CPR with 8.55 ROAS in testing - ready for main campaign</li>
+                <li><strong>LTO Main Campaign:</strong> €35.23 CPR stable performer - within 3x breakeven threshold</li>
+                <li><strong>High-Ticket Backend:</strong> 3-5% conversion on €3K-€9K offers = €9K-€45K revenue per 100 leads</li>
             </ul>
         </div>
 
@@ -427,19 +463,19 @@
 
         <div class="stats-grid">
             <div class="stat-card" style="border-color: #4CAF50;">
-                <span class="stat-number" style="color: #4CAF50;">E6.34</span>
+                <span class="stat-number" style="color: #4CAF50;">€6.34</span>
                 <div class="stat-label">Best CPR<br>(Freebie Campaign)</div>
             </div>
             <div class="stat-card" style="border-color: #2196F3;">
-                <span class="stat-number" style="color: #2196F3;">E35.23</span>
-                <div class="stat-label">LTO Main CPR<br>(Target: &lt;E66)</div>
+                <span class="stat-number" style="color: #2196F3;">€35.23</span>
+                <div class="stat-label">LTO Main CPR<br>(Target: &lt;€66)</div>
             </div>
             <div class="stat-card" style="border-color: #FF9800;">
-                <span class="stat-number" style="color: #FF9800;">E56.80</span>
-                <div class="stat-label">Boost & Convert CPR<br>(Target: &lt;E135)</div>
+                <span class="stat-number" style="color: #FF9800;">€56.80</span>
+                <div class="stat-label">Boost & Convert CPR<br>(Target: &lt;€135)</div>
             </div>
             <div class="stat-card" style="border-color: #E91E63;">
-                <span class="stat-number" style="color: #E91E63;">E361</span>
+                <span class="stat-number" style="color: #E91E63;">€361</span>
                 <div class="stat-label">Worst Ad Set CPR<br>(Critical Issue)</div>
             </div>
         </div>
@@ -478,54 +514,54 @@
                 <tbody>
                     <tr class="campaign-lto">
                         <td style="text-align: left;"><strong>LTO 22 Trainingen</strong></td>
-                        <td>E5,742</td>
-                        <td>E35.23</td>
-                        <td>E40.94</td>
+                        <td>€5,742</td>
+                        <td>€35.23</td>
+                        <td>€40.94</td>
                         <td class="trend-down">+16%</td>
-                        <td>E66</td>
+                        <td>€66</td>
                         <td><span class="status-badge status-good">Within Target</span></td>
                     </tr>
                     <tr class="campaign-boost">
                         <td style="text-align: left;"><strong>Boost & Convert ABO</strong></td>
-                        <td>E6,986</td>
-                        <td>E56.80</td>
-                        <td>E48.58</td>
+                        <td>€6,986</td>
+                        <td>€56.80</td>
+                        <td>€48.58</td>
                         <td class="trend-up">-14%</td>
-                        <td>E135</td>
+                        <td>€135</td>
                         <td><span class="status-badge status-improving">Improving</span></td>
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>LTO Testing</strong></td>
-                        <td>E1,686</td>
-                        <td>E41.11</td>
-                        <td>E38.71</td>
+                        <td>€1,686</td>
+                        <td>€41.11</td>
+                        <td>€38.71</td>
                         <td class="trend-up">-6%</td>
-                        <td>E66</td>
+                        <td>€66</td>
                         <td><span class="status-badge status-good">Within Target</span></td>
                     </tr>
                     <tr class="campaign-christmas">
                         <td style="text-align: left;"><strong>Clients before Christmas</strong></td>
-                        <td>E1,913</td>
-                        <td>E86.95</td>
-                        <td>E70.22</td>
+                        <td>€1,913</td>
+                        <td>€86.95</td>
+                        <td>€70.22</td>
                         <td class="trend-up">-19%</td>
-                        <td>E141*</td>
+                        <td>€141*</td>
                         <td><span class="status-badge status-monitor">Monitor</span></td>
                     </tr>
                     <tr class="campaign-freebie">
                         <td style="text-align: left;"><strong>GH Freebie AI</strong></td>
-                        <td>E1,708</td>
-                        <td>E6.42</td>
-                        <td>E6.34</td>
+                        <td>€1,708</td>
+                        <td>€6.42</td>
+                        <td>€6.34</td>
                         <td class="trend-up">-1%</td>
                         <td>N/A</td>
                         <td><span class="status-badge status-excellent">Excellent</span></td>
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>Traffic Retargeting</strong></td>
-                        <td>E648</td>
-                        <td>E0.12/LPV</td>
-                        <td>E0.12/LPV</td>
+                        <td>€648</td>
+                        <td>€0.12/LPV</td>
+                        <td>€0.12/LPV</td>
                         <td class="trend-stable">Stable</td>
                         <td>N/A</td>
                         <td><span class="status-badge status-efficient">Efficient</span></td>
@@ -533,7 +569,7 @@
                 </tbody>
             </table>
         </div>
-        <p style="font-size: 12px; opacity: 0.7; margin-top: -10px;">*Christmas Workshop at E47 price point = E141 BE target</p>
+        <p style="font-size: 12px; opacity: 0.7; margin-top: -10px;">*Christmas Workshop at €47 price point = €141 BE target</p>
 
         <div class="two-column" style="margin-top: 20px;">
             <div class="competitor-section" style="border-color: #4CAF50;">
@@ -541,8 +577,8 @@
                 <ul class="bullet-points" style="font-size: 12px;">
                     <li>Boost & Convert CPR improving 14% month-over-month</li>
                     <li>Christmas Workshop CPR dropped 19% with ABO structure</li>
-                    <li>LTO Testing identifying winners efficiently at E38.71 CPR</li>
-                    <li>Freebie campaign maintaining excellent E6.34 CPR</li>
+                    <li>LTO Testing identifying winners efficiently at €38.71 CPR</li>
+                    <li>Freebie campaign maintaining excellent €6.34 CPR</li>
                     <li>Total portfolio conversions: 795+ purchases in 90 days</li>
                 </ul>
             </div>
@@ -550,9 +586,9 @@
             <div class="competitor-section" style="border-color: #F44336;">
                 <h4 style="color: #F44336; margin-bottom: 15px;">CONCERNING TRENDS</h4>
                 <ul class="bullet-points" style="font-size: 12px;">
-                    <li>LTO Main CPR increased 16% (E35.23 to E40.94)</li>
+                    <li>LTO Main CPR increased 16% (€35.23 to €40.94)</li>
                     <li>Several ABO ad sets at 4-16x breakeven</li>
-                    <li>New structure 2.0 campaign at E82.70 CPR (paused)</li>
+                    <li>New structure 2.0 campaign at €82.70 CPR (paused)</li>
                     <li>Workshop campaigns showing inconsistent performance</li>
                     <li>Meta vs Backend data discrepancy on purchases</li>
                 </ul>
@@ -561,7 +597,7 @@
 
         <div class="highlight-box" style="margin-top: 20px;">
             <h3>Key Insight: Backend Revenue Potential</h3>
-            <p>795 workshop purchases x 4% high-ticket conversion x E6,000 avg = <strong>E190,800 potential backend revenue</strong></p>
+            <p>795 workshop purchases x 4% high-ticket conversion x €6,000 avg = <strong>€190,800 potential backend revenue</strong></p>
         </div>
     </div>
 
@@ -600,7 +636,7 @@
                         <td style="text-align: left;"><strong>Tekst 2 - Video Carolien je post je suf</strong></td>
                         <td>LTO Main</td>
                         <td>138</td>
-                        <td style="color: #4CAF50;">E36.40</td>
+                        <td style="color: #4CAF50;">€36.40</td>
                         <td>1.20</td>
                         <td>Video</td>
                         <td><strong>SCALE BUDGET</strong></td>
@@ -609,7 +645,7 @@
                         <td style="text-align: left;"><strong>18 video</strong></td>
                         <td>B&C ABO</td>
                         <td>39</td>
-                        <td style="color: #4CAF50;">E21.80</td>
+                        <td style="color: #4CAF50;">€21.80</td>
                         <td>2.38</td>
                         <td>Video</td>
                         <td><strong>SCALE BUDGET</strong></td>
@@ -618,7 +654,7 @@
                         <td style="text-align: left;"><strong>15 video</strong></td>
                         <td>B&C ABO</td>
                         <td>22</td>
-                        <td style="color: #4CAF50;">E31.72</td>
+                        <td style="color: #4CAF50;">€31.72</td>
                         <td>0.81</td>
                         <td>Video</td>
                         <td>Maintain</td>
@@ -627,7 +663,7 @@
                         <td style="text-align: left;"><strong>Talking head 2</strong></td>
                         <td>LTO Testing</td>
                         <td>12</td>
-                        <td style="color: #4CAF50;">E38.02</td>
+                        <td style="color: #4CAF50;">€38.02</td>
                         <td>8.55</td>
                         <td>Video</td>
                         <td><strong>MOVE TO MAIN</strong></td>
@@ -636,7 +672,7 @@
                         <td style="text-align: left;"><strong>13 static</strong></td>
                         <td>B&C ABO</td>
                         <td>17</td>
-                        <td style="color: #4CAF50;">E37.79</td>
+                        <td style="color: #4CAF50;">€37.79</td>
                         <td>0.75</td>
                         <td>Static</td>
                         <td>Maintain</td>
@@ -645,7 +681,7 @@
                         <td style="text-align: left;"><strong>Video 4 - New 2</strong></td>
                         <td>Christmas</td>
                         <td>6</td>
-                        <td style="color: #4CAF50;">E35.69</td>
+                        <td style="color: #4CAF50;">€35.69</td>
                         <td>5.60</td>
                         <td>Video</td>
                         <td><strong>SCALE BUDGET</strong></td>
@@ -654,7 +690,7 @@
                         <td style="text-align: left;"><strong>Tekst 2 - Video Carolien Focus</strong></td>
                         <td>LTO Main</td>
                         <td>5</td>
-                        <td style="color: #4CAF50;">E17.26</td>
+                        <td style="color: #4CAF50;">€17.26</td>
                         <td>1.27</td>
                         <td>Video</td>
                         <td><strong>SCALE BUDGET</strong></td>
@@ -667,7 +703,7 @@
             <div class="competitor-section" style="border-color: #4CAF50;">
                 <h4 style="color: #4CAF50; margin-bottom: 10px;">VIDEO PERFORMANCE</h4>
                 <div style="font-size: 13px;">
-                    <p><strong>Avg CPR:</strong> E32.45</p>
+                    <p><strong>Avg CPR:</strong> €32.45</p>
                     <p><strong>Total Purchases:</strong> 250+</p>
                     <p><strong>Best Performer:</strong> Carolien talking head content</p>
                 </div>
@@ -679,9 +715,9 @@
             <div class="competitor-section" style="border-color: #2196F3;">
                 <h4 style="color: #2196F3; margin-bottom: 10px;">STATIC PERFORMANCE</h4>
                 <div style="font-size: 13px;">
-                    <p><strong>Avg CPR:</strong> E54.20</p>
+                    <p><strong>Avg CPR:</strong> €54.20</p>
                     <p><strong>Total Purchases:</strong> 45+</p>
-                    <p><strong>Best Performer:</strong> 13 static at E37.79</p>
+                    <p><strong>Best Performer:</strong> 13 static at €37.79</p>
                 </div>
                 <div style="margin-top: 10px; padding: 10px; background: rgba(33, 150, 243, 0.2); border-radius: 5px; font-size: 12px;">
                     <strong>Key Finding:</strong> Static works best for retargeting and social proof angles
@@ -691,7 +727,7 @@
             <div class="competitor-section" style="border-color: #9C27B0;">
                 <h4 style="color: #9C27B0; margin-bottom: 10px;">CAROUSEL PERFORMANCE</h4>
                 <div style="font-size: 13px;">
-                    <p><strong>Avg CPR:</strong> E48.90</p>
+                    <p><strong>Avg CPR:</strong> €48.90</p>
                     <p><strong>Total Purchases:</strong> 25+</p>
                     <p><strong>Best Performer:</strong> Workshop carousels</p>
                 </div>
@@ -705,9 +741,9 @@
             <div class="tier-title">CREATIVE INSIGHTS & RECOMMENDATIONS</div>
             <ul class="bullet-points" style="font-size: 13px;">
                 <li><strong>Carolien's talking head videos are your top performers</strong> - prioritize creating more variations</li>
-                <li><strong>UGC-style content</strong> (Tekst 2 - UCG 6) showing promise at E44.34 CPR - continue testing</li>
+                <li><strong>UGC-style content</strong> (Tekst 2 - UCG 6) showing promise at €44.34 CPR - continue testing</li>
                 <li><strong>B-roll compilation videos</strong> underperforming - consider discontinuing or refreshing</li>
-                <li><strong>Social proof angle</strong> needs optimization - current E268.88 CPR is unacceptable</li>
+                <li><strong>Social proof angle</strong> needs optimization - current €268.88 CPR is unacceptable</li>
             </ul>
         </div>
     </div>
@@ -750,63 +786,63 @@
                     <tr style="background: rgba(244, 67, 54, 0.3);">
                         <td style="text-align: left;"><strong>Ad set 4</strong></td>
                         <td>B&C ABO</td>
-                        <td>E361.30</td>
+                        <td>€361.30</td>
                         <td>1</td>
-                        <td style="color: #F44336; font-weight: bold;">E361.30</td>
+                        <td style="color: #F44336; font-weight: bold;">€361.30</td>
                         <td>16.4x BE</td>
                         <td><strong>PAUSE IMMEDIATELY</strong></td>
                     </tr>
                     <tr style="background: rgba(244, 67, 54, 0.3);">
                         <td style="text-align: left;"><strong>Ad set | Social Proof</strong></td>
                         <td>B&C ABO</td>
-                        <td>E537.75</td>
+                        <td>€537.75</td>
                         <td>2</td>
-                        <td style="color: #F44336; font-weight: bold;">E268.88</td>
+                        <td style="color: #F44336; font-weight: bold;">€268.88</td>
                         <td>6.0x BE</td>
                         <td><strong>PAUSE IMMEDIATELY</strong></td>
                     </tr>
                     <tr style="background: rgba(244, 67, 54, 0.3);">
                         <td style="text-align: left;"><strong>Ad set 9</strong></td>
                         <td>B&C ABO</td>
-                        <td>E273.67</td>
+                        <td>€273.67</td>
                         <td>1</td>
-                        <td style="color: #F44336; font-weight: bold;">E273.67</td>
+                        <td style="color: #F44336; font-weight: bold;">€273.67</td>
                         <td>6.1x BE</td>
                         <td><strong>PAUSE IMMEDIATELY</strong></td>
                     </tr>
                     <tr style="background: rgba(255, 152, 0, 0.3);">
                         <td style="text-align: left;"><strong>Ad set 2</strong></td>
                         <td>B&C ABO</td>
-                        <td>E367.90</td>
+                        <td>€367.90</td>
                         <td>2</td>
-                        <td style="color: #FF9800; font-weight: bold;">E183.95</td>
+                        <td style="color: #FF9800; font-weight: bold;">€183.95</td>
                         <td>4.1x BE</td>
                         <td><strong>PAUSE & REVIEW</strong></td>
                     </tr>
                     <tr style="background: rgba(255, 152, 0, 0.3);">
                         <td style="text-align: left;"><strong>Ad set 3</strong></td>
                         <td>B&C ABO</td>
-                        <td>E358.41</td>
+                        <td>€358.41</td>
                         <td>2</td>
-                        <td style="color: #FF9800; font-weight: bold;">E179.21</td>
+                        <td style="color: #FF9800; font-weight: bold;">€179.21</td>
                         <td>4.0x BE</td>
                         <td><strong>PAUSE & REVIEW</strong></td>
                     </tr>
                     <tr style="background: rgba(255, 152, 0, 0.3);">
                         <td style="text-align: left;"><strong>Ad set 7</strong></td>
                         <td>B&C ABO</td>
-                        <td>E537.35</td>
+                        <td>€537.35</td>
                         <td>3</td>
-                        <td style="color: #FF9800; font-weight: bold;">E179.12</td>
+                        <td style="color: #FF9800; font-weight: bold;">€179.12</td>
                         <td>4.0x BE</td>
                         <td><strong>PAUSE & REVIEW</strong></td>
                     </tr>
                     <tr style="background: rgba(255, 152, 0, 0.3);">
                         <td style="text-align: left;"><strong>Ad set 6</strong></td>
                         <td>B&C ABO</td>
-                        <td>E447.94</td>
+                        <td>€447.94</td>
                         <td>3</td>
-                        <td style="color: #FF9800; font-weight: bold;">E149.31</td>
+                        <td style="color: #FF9800; font-weight: bold;">€149.31</td>
                         <td>3.3x BE</td>
                         <td><strong>MONITOR CLOSELY</strong></td>
                     </tr>
@@ -818,11 +854,11 @@
             <div class="issue-box">
                 <div class="tier-title" style="color: #F44336;">TOTAL BUDGET WASTE CALCULATION</div>
                 <div style="font-size: 14px; margin-top: 10px;">
-                    <p><strong>Ad Sets &gt;3x Breakeven:</strong> E2,884.32 spent</p>
+                    <p><strong>Ad Sets &gt;3x Breakeven:</strong> €2,884.32 spent</p>
                     <p><strong>Purchases Generated:</strong> 14</p>
-                    <p><strong>Actual CPR:</strong> E206.02</p>
-                    <p><strong>Target CPR:</strong> E45 (Boost & Convert)</p>
-                    <p style="margin-top: 10px; color: #F44336;"><strong>Excess Spend:</strong> E2,254.32 (E206.02 - E45) x 14</p>
+                    <p><strong>Actual CPR:</strong> €206.02</p>
+                    <p><strong>Target CPR:</strong> €45 (Boost & Convert)</p>
+                    <p style="margin-top: 10px; color: #F44336;"><strong>Excess Spend:</strong> €2,254.32 (€206.02 - €45) x 14</p>
                 </div>
                 <div style="margin-top: 15px; padding: 10px; background: rgba(244, 67, 54, 0.3); border-radius: 5px;">
                     <strong>Impact:</strong> This budget could have generated 50+ additional purchases at target CPR
@@ -833,7 +869,7 @@
                 <div class="tier-title">IMMEDIATE ACTIONS</div>
                 <ul class="bullet-points" style="font-size: 13px;">
                     <li><strong>Pause all ad sets &gt;3x breakeven immediately</strong></li>
-                    <li><strong>Implement automated rules:</strong> Pause when CPR exceeds 2.5x BE after E100 spend</li>
+                    <li><strong>Implement automated rules:</strong> Pause when CPR exceeds 2.5x BE after €100 spend</li>
                     <li><strong>Daily monitoring:</strong> Check all ad sets every 24 hours</li>
                     <li><strong>Weekend coverage:</strong> Establish weekend monitoring protocol</li>
                     <li><strong>Consolidate ABO structure:</strong> Too many ad sets diluting optimization</li>
@@ -843,7 +879,7 @@
 
         <div class="stats-grid">
             <div class="stat-card" style="border-color: #F44336;">
-                <span class="stat-number" style="color: #F44336;">E2,884</span>
+                <span class="stat-number" style="color: #F44336;">€2,884</span>
                 <div class="stat-label">Total Spent on<br>&gt;3x BE Ad Sets</div>
             </div>
             <div class="stat-card" style="border-color: #FF9800;">
@@ -877,19 +913,19 @@
         <div class="roi-visual">
             <div class="roi-box" style="border: 2px solid #4CAF50;">
                 <h4 style="color: #4CAF50;">100 Workshop Buyers</h4>
-                <div style="font-size: 24px; margin: 10px 0;">E22-E47 each</div>
-                <div style="font-size: 12px;">Frontend Revenue: E2,200-E4,700</div>
+                <div style="font-size: 24px; margin: 10px 0;">€22-€47 each</div>
+                <div style="font-size: 12px;">Frontend Revenue: €2,200-€4,700</div>
             </div>
-            <div class="arrow">&rarr;</div>
+            <div class="arrow">&gt;</div>
             <div class="roi-box" style="border: 2px solid #2196F3;">
                 <h4 style="color: #2196F3;">3-5 High-Ticket Sales</h4>
                 <div style="font-size: 24px; margin: 10px 0;">3-5% Convert</div>
                 <div style="font-size: 12px;">Qualification to Strategy Call</div>
             </div>
-            <div class="arrow">&rarr;</div>
+            <div class="arrow">&gt;</div>
             <div class="roi-box" style="border: 2px solid #cc5b27;">
-                <h4 style="color: #cc5b27;">E9K-E45K Revenue</h4>
-                <div style="font-size: 24px; margin: 10px 0;">E3K-E9K offers</div>
+                <h4 style="color: #cc5b27;">€9K-€45K Revenue</h4>
+                <div style="font-size: 24px; margin: 10px 0;">€3K-€9K offers</div>
                 <div style="font-size: 12px;">Backend Profit Center</div>
             </div>
         </div>
@@ -916,44 +952,44 @@
                 </thead>
                 <tbody>
                     <tr style="background: rgba(76, 175, 80, 0.2);">
-                        <td><strong>E22 CPR</strong></td>
-                        <td>E2,200</td>
-                        <td>E2,200</td>
-                        <td style="color: #4CAF50;">E0 (BE)</td>
-                        <td>E24,000</td>
-                        <td style="color: #4CAF50; font-weight: bold;">E24,000</td>
+                        <td><strong>€22 CPR</strong></td>
+                        <td>€2,200</td>
+                        <td>€2,200</td>
+                        <td style="color: #4CAF50;">€0 (BE)</td>
+                        <td>€24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">€24,000</td>
                     </tr>
                     <tr style="background: rgba(76, 175, 80, 0.2);">
-                        <td><strong>E35 CPR (Current)</strong></td>
-                        <td>E3,500</td>
-                        <td>E2,200</td>
-                        <td style="color: #F44336;">-E1,300</td>
-                        <td>E24,000</td>
-                        <td style="color: #4CAF50; font-weight: bold;">E22,700</td>
+                        <td><strong>€35 CPR (Current)</strong></td>
+                        <td>€3,500</td>
+                        <td>€2,200</td>
+                        <td style="color: #F44336;">-€1,300</td>
+                        <td>€24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">€22,700</td>
                     </tr>
                     <tr style="background: rgba(255, 152, 0, 0.2);">
-                        <td><strong>E50 CPR</strong></td>
-                        <td>E5,000</td>
-                        <td>E2,200</td>
-                        <td style="color: #F44336;">-E2,800</td>
-                        <td>E24,000</td>
-                        <td style="color: #4CAF50; font-weight: bold;">E21,200</td>
+                        <td><strong>€50 CPR</strong></td>
+                        <td>€5,000</td>
+                        <td>€2,200</td>
+                        <td style="color: #F44336;">-€2,800</td>
+                        <td>€24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">€21,200</td>
                     </tr>
                     <tr style="background: rgba(255, 152, 0, 0.2);">
-                        <td><strong>E66 CPR (3x BE)</strong></td>
-                        <td>E6,600</td>
-                        <td>E2,200</td>
-                        <td style="color: #F44336;">-E4,400</td>
-                        <td>E24,000</td>
-                        <td style="color: #4CAF50; font-weight: bold;">E19,600</td>
+                        <td><strong>€66 CPR (3x BE)</strong></td>
+                        <td>€6,600</td>
+                        <td>€2,200</td>
+                        <td style="color: #F44336;">-€4,400</td>
+                        <td>€24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">€19,600</td>
                     </tr>
                     <tr style="background: rgba(244, 67, 54, 0.2);">
-                        <td><strong>E90 CPR</strong></td>
-                        <td>E9,000</td>
-                        <td>E2,200</td>
-                        <td style="color: #F44336;">-E6,800</td>
-                        <td>E24,000</td>
-                        <td style="color: #4CAF50; font-weight: bold;">E17,200</td>
+                        <td><strong>€90 CPR</strong></td>
+                        <td>€9,000</td>
+                        <td>€2,200</td>
+                        <td style="color: #F44336;">-€6,800</td>
+                        <td>€24,000</td>
+                        <td style="color: #4CAF50; font-weight: bold;">€17,200</td>
                     </tr>
                 </tbody>
             </table>
@@ -974,10 +1010,10 @@
             <div class="tier-box">
                 <div class="tier-title">RECOMMENDED CPR THRESHOLDS</div>
                 <ul class="bullet-points" style="font-size: 13px;">
-                    <li><strong>E22 LTO:</strong> Target E35, Max E66 (3x BE)</li>
-                    <li><strong>E45 Workshop:</strong> Target E60, Max E135 (3x BE)</li>
-                    <li><strong>E47 Christmas:</strong> Target E65, Max E141 (3x BE)</li>
-                    <li><strong>Freebie:</strong> Target &lt;E10 (lead gen focus)</li>
+                    <li><strong>€22 LTO:</strong> Target €35, Max €66 (3x BE)</li>
+                    <li><strong>€45 Workshop:</strong> Target €60, Max €135 (3x BE)</li>
+                    <li><strong>€47 Christmas:</strong> Target €65, Max €141 (3x BE)</li>
+                    <li><strong>Freebie:</strong> Target &lt;€10 (lead gen focus)</li>
                 </ul>
             </div>
         </div>
@@ -1010,7 +1046,7 @@
                     <li><strong>Advantage+ Targeting:</strong> Allowing Meta to optimize audience</li>
                     <li><strong>Video-First Approach:</strong> Top performers are all video content</li>
                     <li><strong>NL/BE Focus:</strong> Geographic targeting is appropriate</li>
-                    <li><strong>Traffic Retargeting:</strong> Efficient E0.12/LPV building audiences</li>
+                    <li><strong>Traffic Retargeting:</strong> Efficient €0.12/LPV building audiences</li>
                 </ul>
             </div>
             
@@ -1062,7 +1098,7 @@
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>LTO Main Campaign</strong></td>
-                        <td>CPR creeping up (E35 to E41)</td>
+                        <td>CPR creeping up (€35 to €41)</td>
                         <td><strong>LTO Winners (Scale)</strong></td>
                         <td>Only proven ads, higher budgets</td>
                     </tr>
@@ -1096,7 +1132,7 @@
                 <div class="issue-box">
                     <div class="tier-title" style="color: #F44336;">WEEK 1: EMERGENCY FIXES</div>
                     <ul class="number-list" style="font-size: 13px;">
-                        <li>Pause all 7 ad sets exceeding 3x breakeven (saves approx E2,254 in waste)</li>
+                        <li>Pause all 7 ad sets exceeding 3x breakeven (saves approx €2,254 in waste)</li>
                         <li>Implement automated CPR monitoring rules in Ads Manager</li>
                         <li>Verify conversion tracking: resolve Meta vs Backend discrepancy</li>
                         <li>Move Talking Head 2 from testing to main campaign</li>
@@ -1131,9 +1167,9 @@
                 <div class="opportunity-box">
                     <div class="tier-title">SUCCESS METRICS (30-DAY)</div>
                     <ul class="bullet-points" style="font-size: 13px;">
-                        <li><strong>LTO CPR:</strong> Reduce from E40.94 to &lt;E38</li>
-                        <li><strong>B&C CPR:</strong> Maintain &lt;E55</li>
-                        <li><strong>Budget Waste:</strong> Reduce from E2,884 to E0</li>
+                        <li><strong>LTO CPR:</strong> Reduce from €40.94 to &lt;€38</li>
+                        <li><strong>B&C CPR:</strong> Maintain &lt;€55</li>
+                        <li><strong>Budget Waste:</strong> Reduce from €2,884 to €0</li>
                         <li><strong>Total Purchases:</strong> 150+ per month</li>
                         <li><strong>Creative Pipeline:</strong> 2-week inventory maintained</li>
                     </ul>
@@ -1143,12 +1179,12 @@
 
         <div class="stats-grid">
             <div class="stat-card" style="border-color: #4CAF50;">
-                <span class="stat-number" style="color: #4CAF50;">E6,000</span>
+                <span class="stat-number" style="color: #4CAF50;">€6,000</span>
                 <div class="stat-label">Target Monthly Spend<br>(Controlled Scale)</div>
             </div>
             <div class="stat-card" style="border-color: #2196F3;">
-                <span class="stat-number" style="color: #2196F3;">&lt;E40</span>
-                <div class="stat-label">Target LTO CPR<br>(vs E40.94 current)</div>
+                <span class="stat-number" style="color: #2196F3;">&lt;€40</span>
+                <div class="stat-label">Target LTO CPR<br>(vs €40.94 current)</div>
             </div>
             <div class="stat-card" style="border-color: #FF9800;">
                 <span class="stat-number" style="color: #FF9800;">5-7</span>
@@ -1173,7 +1209,7 @@
             <div class="tier-box" style="border-color: #4CAF50;">
                 <div class="tier-title" style="color: #4CAF50;">MONTH 1: STABILIZATION</div>
                 <div style="background: rgba(76, 175, 80, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-                    <strong>Daily Budget:</strong> E200/day (E6,000/month)
+                    <strong>Daily Budget:</strong> €200/day (€6,000/month)
                 </div>
                 <ul class="bullet-points" style="font-size: 12px;">
                     <li>Emergency fixes complete</li>
@@ -1183,14 +1219,14 @@
                     <li>Weekend monitoring active</li>
                 </ul>
                 <div style="margin-top: 10px; padding: 8px; background: rgba(76, 175, 80, 0.2); border-radius: 5px; font-size: 11px;">
-                    <strong>Target:</strong> E38 CPR | 150 purchases
+                    <strong>Target:</strong> €38 CPR | 150 purchases
                 </div>
             </div>
             
             <div class="tier-box" style="border-color: #2196F3;">
                 <div class="tier-title" style="color: #2196F3;">MONTH 2: OPTIMIZATION</div>
                 <div style="background: rgba(33, 150, 243, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-                    <strong>Daily Budget:</strong> E250-300/day (E7,500-9,000/month)
+                    <strong>Daily Budget:</strong> €250-300/day (€7,500-9,000/month)
                 </div>
                 <ul class="bullet-points" style="font-size: 12px;">
                     <li>Scale winning creatives</li>
@@ -1200,14 +1236,14 @@
                     <li>Backend conversion tracking</li>
                 </ul>
                 <div style="margin-top: 10px; padding: 8px; background: rgba(33, 150, 243, 0.2); border-radius: 5px; font-size: 11px;">
-                    <strong>Target:</strong> E36 CPR | 200 purchases
+                    <strong>Target:</strong> €36 CPR | 200 purchases
                 </div>
             </div>
             
             <div class="tier-box" style="border-color: #9C27B0;">
                 <div class="tier-title" style="color: #9C27B0;">MONTH 3: SCALE</div>
                 <div style="background: rgba(156, 39, 176, 0.3); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-                    <strong>Daily Budget:</strong> E300-400/day (E9,000-12,000/month)
+                    <strong>Daily Budget:</strong> €300-400/day (€9,000-12,000/month)
                 </div>
                 <ul class="bullet-points" style="font-size: 12px;">
                     <li>Full scaling of winners</li>
@@ -1217,7 +1253,7 @@
                     <li>Process documentation</li>
                 </ul>
                 <div style="margin-top: 10px; padding: 8px; background: rgba(156, 39, 176, 0.2); border-radius: 5px; font-size: 11px;">
-                    <strong>Target:</strong> E35 CPR | 300 purchases
+                    <strong>Target:</strong> €35 CPR | 300 purchases
                 </div>
             </div>
         </div>
@@ -1226,13 +1262,13 @@
             <h3>90-Day Projection: 650+ Purchases</h3>
             <div class="two-column" style="text-align: left; margin-top: 15px;">
                 <div>
-                    <p><strong>Total Ad Spend:</strong> E22,500-27,000</p>
+                    <p><strong>Total Ad Spend:</strong> €22,500-27,000</p>
                     <p><strong>Total Purchases:</strong> 650+</p>
-                    <p><strong>Average CPR:</strong> E35-38</p>
+                    <p><strong>Average CPR:</strong> €35-38</p>
                 </div>
                 <div>
                     <p><strong>High-Ticket Conversions (4%):</strong> 26</p>
-                    <p><strong>Backend Revenue:</strong> E156,000 (at E6K avg)</p>
+                    <p><strong>Backend Revenue:</strong> €156,000 (at €6K avg)</p>
                     <p><strong>Potential ROI:</strong> 5.8x-6.9x</p>
                 </div>
             </div>
@@ -1260,21 +1296,21 @@
                     <tr>
                         <td><strong>Month 1</strong></td>
                         <td>Stabilization & Fixes</td>
-                        <td>E6,000</td>
+                        <td>€6,000</td>
                         <td>150</td>
                         <td style="color: #4CAF50;">Low</td>
                     </tr>
                     <tr>
                         <td><strong>Month 2</strong></td>
                         <td>Optimization & Testing</td>
-                        <td>E7,500-9,000</td>
+                        <td>€7,500-9,000</td>
                         <td>200</td>
                         <td style="color: #FF9800;">Medium</td>
                     </tr>
                     <tr>
                         <td><strong>Month 3</strong></td>
                         <td>Scale & Systemize</td>
-                        <td>E9,000-12,000</td>
+                        <td>€9,000-12,000</td>
                         <td>300</td>
                         <td style="color: #FF9800;">Medium</td>
                     </tr>
@@ -1339,7 +1375,7 @@
             <div class="issue-box">
                 <div class="tier-title" style="color: #F44336;">ESCALATION TRIGGERS</div>
                 <ul class="bullet-points" style="font-size: 13px;">
-                    <li><strong>Immediate Alert:</strong> Any ad set exceeding 2.5x BE after E100 spend</li>
+                    <li><strong>Immediate Alert:</strong> Any ad set exceeding 2.5x BE after €100 spend</li>
                     <li><strong>Same Day Response:</strong> CPR trending &gt;20% above target for 48 hours</li>
                     <li><strong>Weekly Review:</strong> Any campaign consistently above target CPR</li>
                     <li><strong>Creative Emergency:</strong> All ads in campaign declining performance</li>
@@ -1375,16 +1411,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="text-align: left;"><strong>LTO CPR (E22 product)</strong></td>
-                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;E40</td>
-                        <td style="background: rgba(255, 152, 0, 0.3);">E40-E55</td>
-                        <td style="background: rgba(244, 67, 54, 0.3);">E66 (3x BE)</td>
+                        <td style="text-align: left;"><strong>LTO CPR (€22 product)</strong></td>
+                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;€40</td>
+                        <td style="background: rgba(255, 152, 0, 0.3);">€40-€55</td>
+                        <td style="background: rgba(244, 67, 54, 0.3);">€66 (3x BE)</td>
                     </tr>
                     <tr>
-                        <td style="text-align: left;"><strong>Workshop CPR (E45 product)</strong></td>
-                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;E60</td>
-                        <td style="background: rgba(255, 152, 0, 0.3);">E60-E100</td>
-                        <td style="background: rgba(244, 67, 54, 0.3);">E135 (3x BE)</td>
+                        <td style="text-align: left;"><strong>Workshop CPR (€45 product)</strong></td>
+                        <td style="background: rgba(76, 175, 80, 0.3);">&lt;€60</td>
+                        <td style="background: rgba(255, 152, 0, 0.3);">€60-€100</td>
+                        <td style="background: rgba(244, 67, 54, 0.3);">€135 (3x BE)</td>
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>Daily Spend Pacing</strong></td>
@@ -1419,7 +1455,7 @@
                     <ul class="bullet-points">
                         <li>Pause all ad sets exceeding 3x breakeven immediately</li>
                         <li>Implement automated CPR monitoring rules</li>
-                        <li>Move Talking Head 2 to main campaign (E38 CPR, 8.55 ROAS)</li>
+                        <li>Move Talking Head 2 to main campaign (€38 CPR, 8.55 ROAS)</li>
                         <li>Scale Carolien video creative (+30% budget)</li>
                     </ul>
                 </div>
@@ -1455,9 +1491,9 @@
                 <tbody>
                     <tr>
                         <td style="text-align: left;"><strong>Portfolio CPR</strong></td>
-                        <td>E33.63</td>
-                        <td>E38.00</td>
-                        <td>E35.00</td>
+                        <td>€33.63</td>
+                        <td>€38.00</td>
+                        <td>€35.00</td>
                         <td style="color: #4CAF50;"><strong>+4% improvement</strong></td>
                     </tr>
                     <tr>
@@ -1469,30 +1505,30 @@
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>Monthly Ad Spend</strong></td>
-                        <td>E6,000</td>
-                        <td>E6,000</td>
-                        <td>E10,500</td>
+                        <td>€6,000</td>
+                        <td>€6,000</td>
+                        <td>€10,500</td>
                         <td style="color: #4CAF50;"><strong>+75% scale</strong></td>
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>LTO Campaign CPR</strong></td>
-                        <td>E40.94</td>
-                        <td>E38.00</td>
-                        <td>E35.00</td>
+                        <td>€40.94</td>
+                        <td>€38.00</td>
+                        <td>€35.00</td>
                         <td style="color: #4CAF50;"><strong>-14% reduction</strong></td>
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>B&C Campaign CPR</strong></td>
-                        <td>E48.58</td>
-                        <td>E45.00</td>
-                        <td>E40.00</td>
+                        <td>€48.58</td>
+                        <td>€45.00</td>
+                        <td>€40.00</td>
                         <td style="color: #4CAF50;"><strong>-18% reduction</strong></td>
                     </tr>
                     <tr>
                         <td style="text-align: left;"><strong>Budget Waste (&gt;3x BE)</strong></td>
-                        <td>E2,884</td>
-                        <td>E0</td>
-                        <td>E0</td>
+                        <td>€2,884</td>
+                        <td>€0</td>
+                        <td>€0</td>
                         <td style="color: #4CAF50;"><strong>-100% eliminated</strong></td>
                     </tr>
                 </tbody>
@@ -1509,11 +1545,11 @@
                 <div class="stat-label">Expected High-Ticket<br>Conversions (4%)</div>
             </div>
             <div class="stat-card" style="border-color: #FF9800;">
-                <span class="stat-number" style="color: #FF9800;">E156K</span>
+                <span class="stat-number" style="color: #FF9800;">€156K</span>
                 <div class="stat-label">Potential Backend<br>Revenue</div>
             </div>
             <div class="stat-card" style="border-color: #9C27B0;">
-                <span class="stat-number" style="color: #9C27B0;">E35</span>
+                <span class="stat-number" style="color: #9C27B0;">€35</span>
                 <div class="stat-label">Target Portfolio CPR<br>(Month 3)</div>
             </div>
         </div>
@@ -1524,7 +1560,7 @@
             </div>
             <div style="font-size: 1.1em;">
                 Phase 1: Emergency fixes (Week 1) | Phase 2: Structure optimization (Week 2-3) | Phase 3: Scale winners (Week 4+)<br>
-                <strong>Business Model: Frontend breakeven | 3-5% backend conversion | E3K-E9K offers</strong><br>
+                <strong>Business Model: Frontend breakeven | 3-5% backend conversion | €3K-€9K offers</strong><br>
                 <strong>Key Success Factor: Disciplined CPR management + consistent creative pipeline + proactive communication</strong>
             </div>
         </div>
