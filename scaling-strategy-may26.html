@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groeihelden | May 2026 Roadmap to 400 Paid Purchases</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:wght@600;700;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: linear-gradient(135deg, #0f1d36 0%, #162642 50%, #1a2d4f 100%);
+            color: #ffffff;
+            line-height: 1.55;
+            font-size: 16px;
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: 48px 56px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border-bottom: 1px solid rgba(243, 156, 18, 0.15);
+        }
+
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-mark {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #F39C12 0%, #cc5b27 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 22px;
+            color: #0f1d36;
+        }
+
+        .brand-name {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        .brand-name span {
+            color: #F39C12;
+        }
+
+        .slide-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+        }
+
+        .slide-number {
+            background: linear-gradient(135deg, #cc5b27, #F39C12);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            color: #0f1d36;
+            letter-spacing: 0.5px;
+        }
+
+        .main-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.4em;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .main-title .accent {
+            background: linear-gradient(120deg, #F39C12, #cc5b27);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.25em;
+            color: #cbd5e0;
+            font-weight: 400;
+            margin-bottom: 32px;
+            max-width: 780px;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2.1em;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title .accent {
+            color: #F39C12;
+        }
+
+        .section-kicker {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #F39C12;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .section-lede {
+            font-size: 1em;
+            color: #a0aec0;
+            margin-bottom: 28px;
+            max-width: 820px;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(243, 156, 18, 0.3);
+            border-radius: 14px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #F39C12, transparent);
+        }
+
+        .stat-number {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4em;
+            font-weight: 900;
+            color: #F39C12;
+            display: block;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #cbd5e0;
+            font-weight: 500;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .stat-card.green { border-color: rgba(76, 175, 80, 0.4); }
+        .stat-card.green .stat-number { color: #69F0AE; }
+        .stat-card.green::before { background: linear-gradient(90deg, #69F0AE, transparent); }
+
+        .stat-card.blue { border-color: rgba(33, 150, 243, 0.4); }
+        .stat-card.blue .stat-number { color: #64B5F6; }
+        .stat-card.blue::before { background: linear-gradient(90deg, #64B5F6, transparent); }
+
+        .stat-card.purple { border-color: rgba(156, 39, 176, 0.4); }
+        .stat-card.purple .stat-number { color: #CE93D8; }
+        .stat-card.purple::before { background: linear-gradient(90deg, #CE93D8, transparent); }
+
+        .stat-card.red { border-color: rgba(244, 67, 54, 0.4); }
+        .stat-card.red .stat-number { color: #FF8A80; }
+        .stat-card.red::before { background: linear-gradient(90deg, #FF8A80, transparent); }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(204, 91, 39, 0.95), rgba(243, 156, 18, 0.95));
+            padding: 28px 32px;
+            border-radius: 14px;
+            margin: 24px 0;
+            color: #0f1d36;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+        }
+
+        .highlight-box h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            position: relative;
+            color: #0f1d36;
+        }
+
+        .highlight-box p {
+            font-size: 0.98em;
+            line-height: 1.55;
+            position: relative;
+            color: #0f1d36;
+            font-weight: 500;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .perf-table {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 18px 0;
+        }
+
+        .perf-table table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .perf-table th {
+            background: rgba(15, 29, 54, 0.85);
+            padding: 14px 16px;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            color: #F39C12;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #F39C12;
+        }
+
+        .perf-table th:first-child { text-align: left; }
+
+        .perf-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 13.5px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .perf-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .perf-table tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+        .perf-table tr:last-child td { border-bottom: none; }
+
+        .perf-table tr.totals {
+            background: rgba(243, 156, 18, 0.12) !important;
+            font-weight: 700;
+        }
+
+        .perf-table tr.totals td {
+            font-weight: 700;
+            color: #F39C12;
+            border-top: 2px solid rgba(243, 156, 18, 0.4);
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin: 8px 0;
+        }
+
+        .bullet-list li {
+            margin: 11px 0;
+            padding-left: 26px;
+            position: relative;
+            font-size: 14px;
+            color: #e2e8f0;
+            line-height: 1.55;
+        }
+
+        .bullet-list li::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: #F39C12;
+            border-radius: 50%;
+            position: absolute;
+            left: 6px;
+            top: 9px;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+        }
+
+        .number-list {
+            list-style: none;
+            margin: 8px 0;
+            counter-reset: item;
+        }
+
+        .number-list li {
+            margin: 12px 0;
+            padding-left: 38px;
+            position: relative;
+            font-size: 14px;
+            color: #e2e8f0;
+            line-height: 1.55;
+            counter-increment: item;
+        }
+
+        .number-list li::before {
+            content: counter(item);
+            background: linear-gradient(135deg, #F39C12, #cc5b27);
+            color: #0f1d36;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Fraunces', serif;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 22px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-card.success {
+            border-color: rgba(76, 175, 80, 0.4);
+            background: rgba(76, 175, 80, 0.06);
+        }
+
+        .info-card.warning {
+            border-color: rgba(255, 152, 0, 0.45);
+            background: rgba(255, 152, 0, 0.06);
+        }
+
+        .info-card.danger {
+            border-color: rgba(244, 67, 54, 0.45);
+            background: rgba(244, 67, 54, 0.06);
+        }
+
+        .info-card.accent {
+            border-color: rgba(243, 156, 18, 0.5);
+            background: rgba(243, 156, 18, 0.08);
+        }
+
+        .info-card.info {
+            border-color: rgba(33, 150, 243, 0.45);
+            background: rgba(33, 150, 243, 0.06);
+        }
+
+        .info-card .card-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card.success .card-label { color: #69F0AE; }
+        .info-card.warning .card-label { color: #FFB74D; }
+        .info-card.danger .card-label { color: #FF8A80; }
+        .info-card.accent .card-label { color: #F39C12; }
+        .info-card.info .card-label { color: #64B5F6; }
+
+        .info-card .card-label::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        .info-card h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.15em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-good { background: rgba(76, 175, 80, 0.25); color: #69F0AE; border: 1px solid rgba(76, 175, 80, 0.5); }
+        .status-monitor { background: rgba(255, 152, 0, 0.25); color: #FFB74D; border: 1px solid rgba(255, 152, 0, 0.5); }
+        .status-fix { background: rgba(244, 67, 54, 0.25); color: #FF8A80; border: 1px solid rgba(244, 67, 54, 0.5); }
+        .status-scale { background: rgba(243, 156, 18, 0.25); color: #F39C12; border: 1px solid rgba(243, 156, 18, 0.5); }
+        .status-test { background: rgba(33, 150, 243, 0.25); color: #64B5F6; border: 1px solid rgba(33, 150, 243, 0.5); }
+
+        .trend-up { color: #69F0AE; font-weight: 700; }
+        .trend-down { color: #FF8A80; font-weight: 700; }
+        .trend-neutral { color: #FFB74D; font-weight: 700; }
+
+        .num-good { color: #69F0AE; font-weight: 700; }
+        .num-warn { color: #FFB74D; font-weight: 700; }
+        .num-bad { color: #FF8A80; font-weight: 700; }
+
+        .progress-track {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            height: 14px;
+            overflow: hidden;
+            margin: 14px 0 8px;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #cc5b27, #F39C12);
+            border-radius: 30px;
+            position: relative;
+            box-shadow: 0 0 12px rgba(243, 156, 18, 0.4);
+        }
+
+        .progress-marker {
+            position: absolute;
+            top: -22px;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: #F39C12;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .progress-marker::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 6px;
+            background: #F39C12;
+        }
+
+        .arrow-flow {
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            margin: 24px 0;
+        }
+
+        .arrow-step {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(243, 156, 18, 0.25);
+            border-radius: 12px;
+            padding: 18px 20px;
+            position: relative;
+        }
+
+        .arrow-step .step-num {
+            font-family: 'Fraunces', serif;
+            font-size: 0.85em;
+            color: #F39C12;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .arrow-step h4 {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .arrow-step p {
+            font-size: 13px;
+            color: #cbd5e0;
+            line-height: 1.5;
+        }
+
+        .arrow-divider {
+            display: flex;
+            align-items: center;
+            color: #F39C12;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .month-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 22px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .month-card.may-week {
+            border-top: 4px solid #F39C12;
+        }
+
+        .month-header {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25em;
+            font-weight: 800;
+            color: #F39C12;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .month-header .pill {
+            background: rgba(243, 156, 18, 0.15);
+            border: 1px solid rgba(243, 156, 18, 0.4);
+            color: #F39C12;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .month-sub {
+            font-size: 12px;
+            color: #a0aec0;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .calendar-row {
+            background: rgba(15, 29, 54, 0.4);
+            border-left: 3px solid #F39C12;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .calendar-row.workshop { border-left-color: #64B5F6; }
+        .calendar-row.lto { border-left-color: #69F0AE; }
+        .calendar-row.creative { border-left-color: #CE93D8; }
+
+        .calendar-row strong {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .calendar-row .meta {
+            font-size: 11px;
+            color: #a0aec0;
+        }
+
+        .footer-tag {
+            position: absolute;
+            bottom: 18px;
+            right: 56px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .key-call-out {
+            background: rgba(15, 29, 54, 0.6);
+            border-left: 4px solid #F39C12;
+            padding: 18px 22px;
+            margin: 18px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .key-call-out .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #F39C12;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .key-call-out .text {
+            font-size: 14.5px;
+            color: #e2e8f0;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .filter-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(243, 156, 18, 0.1);
+            border: 1px solid rgba(243, 156, 18, 0.3);
+            color: #F39C12;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 3px 5px 3px 0;
+        }
+
+        .filter-chip.exclude {
+            background: rgba(244, 67, 54, 0.08);
+            border-color: rgba(244, 67, 54, 0.3);
+            color: #FF8A80;
+        }
+
+        .target-meter {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 18px 0;
+        }
+
+        .target-meter .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .target-meter .label {
+            font-size: 13px;
+            color: #cbd5e0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .target-meter .value {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6em;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .target-meter .value .suffix {
+            color: #a0aec0;
+            font-size: 0.65em;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .compact-stat {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 14px 16px;
+            text-align: left;
+        }
+
+        .compact-stat .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a0aec0;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .compact-stat .value {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5em;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .compact-stat .delta {
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        .hero-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 30px 34px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-block::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(243, 156, 18, 0.08) 0%, transparent 70%);
+        }
+
+        .step-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .step-flow-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px 20px;
+            border-left: 3px solid #F39C12;
+        }
+
+        .step-flow-item .step-id {
+            font-family: 'Fraunces', serif;
+            background: linear-gradient(135deg, #F39C12, #cc5b27);
+            color: #0f1d36;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .step-flow-item .step-content h5 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .step-flow-item .step-content p {
+            font-size: 13px;
+            color: #cbd5e0;
+            line-height: 1.55;
+        }
+
+        .closing-slide {
+            background: linear-gradient(135deg, #0f1d36 0%, #162642 50%, #1a2d4f 100%);
+        }
+
+        .closing-mark {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #F39C12 0%, #cc5b27 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 38px;
+            color: #0f1d36;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====================== SLIDE 1: TITLE ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Q2 2026 Strategic Roadmap</span>
+            <div class="slide-number">01 / 10</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 60px;">
+        <div class="section-kicker">May 2026 Performance Plan</div>
+        <h1 class="main-title">The Path to <span class="accent">400 Paid Purchases</span><br>per Month</h1>
+        <p class="subtitle">A tactical roadmap for hitting the 400 monthly purchase target across the key workshops, while protecting the 2x CPR ceiling and aligning to the new salesteam economics.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>The April Position</h3>
+        <p>381 paid purchases on €14,603 spend at €38.33 blended CPP. We finished 19 short of target, with creative supply on Carolien talking heads identified as the binding constraint. May execution is built around fixing that, plus excluding the webshops segment that has been pulling down lead quality on AI Storytelling.</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-number">381</span>
+            <div class="stat-label">April Paid Purchases</div>
+        </div>
+        <div class="stat-card green">
+            <span class="stat-number">400</span>
+            <div class="stat-label">May Target Floor</div>
+        </div>
+        <div class="stat-card blue">
+            <span class="stat-number">2x</span>
+            <div class="stat-label">CPR Ceiling Discipline</div>
+        </div>
+        <div class="stat-card purple">
+            <span class="stat-number">1.5x</span>
+            <div class="stat-label">Long Term CPR Goal</div>
+        </div>
+    </div>
+
+    <div style="margin-top: auto; padding-top: 30px; font-size: 13px; color: #a0aec0;">
+        Prepared by Charles Piper, Heath Media | For Nienke van der Sluis & Carolien Pompe | May 2026
+    </div>
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 2: APRIL REVIEW + GAP TO 400 ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>April Performance & The Gap</span>
+            <div class="slide-number">02 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">Where we ended April</div>
+    <h2 class="section-title">A Strong Month, <span class="accent">19 Purchases Short</span></h2>
+    <p class="section-lede">Spend up 66%, purchases up 51%, revenue up 107% versus March. The headline gap to 400 is real but small. The diagnosis matters more than the number, because the same constraint that capped April will cap May if untreated.</p>
+
+    <div class="grid-4">
+        <div class="compact-stat">
+            <div class="label">Spend</div>
+            <div class="value">€14,603</div>
+            <div class="delta trend-up">+66% vs March</div>
+        </div>
+        <div class="compact-stat">
+            <div class="label">Paid Purchases</div>
+            <div class="value">381</div>
+            <div class="delta trend-up">+51% vs March</div>
+        </div>
+        <div class="compact-stat">
+            <div class="label">Blended CPP</div>
+            <div class="value">€38.33</div>
+            <div class="delta trend-down">+€3.47 vs March</div>
+        </div>
+        <div class="compact-stat">
+            <div class="label">Revenue / ROAS</div>
+            <div class="value">€26,708</div>
+            <div class="delta trend-up">1.83 ROAS, +0.36</div>
+        </div>
+    </div>
+
+    <div class="target-meter">
+        <div class="header">
+            <span class="label">Progress to 400 paid purchases</span>
+            <span class="value">381<span class="suffix">/ 400</span></span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" style="width: 95.25%; position: relative;">
+                <div class="progress-marker" style="right: -20px;">95.25%</div>
+            </div>
+        </div>
+        <div style="font-size: 12px; color: #a0aec0; margin-top: 12px;">19 purchases short. Achievable in May with the right creative refresh and audience cleanup.</div>
+    </div>
+
+    <div class="perf-table">
+        <table>
+            <colgroup>
+                <col style="width: 28%;">
+                <col style="width: 11%;">
+                <col style="width: 11%;">
+                <col style="width: 11%;">
+                <col style="width: 10%;">
+                <col style="width: 11%;">
+                <col style="width: 18%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Campaign</th>
+                    <th>Spend</th>
+                    <th>Purchases</th>
+                    <th>CPP</th>
+                    <th>2x Ceiling</th>
+                    <th>ROAS</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Boost & Convert (€27)</td>
+                    <td>€5,048</td>
+                    <td>124</td>
+                    <td class="num-good">€40.71</td>
+                    <td>€54</td>
+                    <td>2.65</td>
+                    <td><span class="status-badge status-scale">Hero Driver</span></td>
+                </tr>
+                <tr>
+                    <td>LTO 22 Trainingen (€22)</td>
+                    <td>€4,827</td>
+                    <td>73</td>
+                    <td class="num-bad">€66.13</td>
+                    <td>€44</td>
+                    <td>0.90</td>
+                    <td><span class="status-badge status-fix">Fix Live</span></td>
+                </tr>
+                <tr>
+                    <td>Viral Reels Hooks (€17)</td>
+                    <td>€1,671</td>
+                    <td>71</td>
+                    <td class="num-good">€23.53</td>
+                    <td>€34</td>
+                    <td>1.52</td>
+                    <td><span class="status-badge status-good">Hold & Refresh</span></td>
+                </tr>
+                <tr>
+                    <td>30 Posts Workshop (€11)</td>
+                    <td>€1,256</td>
+                    <td>73</td>
+                    <td class="num-good">€17.20</td>
+                    <td>€22</td>
+                    <td>0.64</td>
+                    <td><span class="status-badge status-good">Workshop Closed</span></td>
+                </tr>
+                <tr>
+                    <td>LTO Testing (€22)</td>
+                    <td>€1,187</td>
+                    <td>23</td>
+                    <td class="num-bad">€51.61</td>
+                    <td>€44</td>
+                    <td>4.32</td>
+                    <td><span class="status-badge status-monitor">Restructure</span></td>
+                </tr>
+                <tr>
+                    <td>AI Storytelling (€7)</td>
+                    <td>€405</td>
+                    <td>17</td>
+                    <td class="num-bad">€23.81</td>
+                    <td>€14</td>
+                    <td>1.29</td>
+                    <td><span class="status-badge status-fix">Audience Fix</span></td>
+                </tr>
+                <tr>
+                    <td>Traffic Retargeting</td>
+                    <td>€210</td>
+                    <td>0</td>
+                    <td class="num-bad">N/A</td>
+                    <td>N/A</td>
+                    <td>0.00</td>
+                    <td><span class="status-badge status-fix">Paused</span></td>
+                </tr>
+                <tr class="totals">
+                    <td>April Total</td>
+                    <td>€14,603</td>
+                    <td>381</td>
+                    <td>€38.33</td>
+                    <td>-</td>
+                    <td>1.83</td>
+                    <td><span class="status-badge status-monitor">19 Short</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="key-call-out">
+        <div class="label">The single most important number on this page</div>
+        <div class="text">LTO 22 absorbed €4,827 at €66 CPP because one fatigued creative held 89% of spend. Rebuild that one campaign into healthy distribution and the gap to 400 closes without any extra budget.</div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 3: THE CONSTRAINT DIAGNOSIS ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Constraint Diagnosis</span>
+            <div class="slide-number">03 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">Why we capped at 381</div>
+    <h2 class="section-title">The Bottleneck is <span class="accent">Creative Supply</span>, Not Budget</h2>
+    <p class="section-lede">Two compounding constraints capped April. Creative supply on Carolien talking heads is the primary limiter. Audience quality on AI Storytelling is the secondary drag. Neither is solved by spending more.</p>
+
+    <div class="two-column">
+        <div class="info-card danger">
+            <div class="card-label">Constraint 1 | Primary</div>
+            <h4>Incumbent Creative Lock on LTO 22</h4>
+            <p style="font-size: 13.5px; color: #cbd5e0; line-height: 1.6; margin-bottom: 16px;">One ad absorbed 89% of LTO 22 spend in April. CPP held at €48 for weeks then doubled to €105 in 7 days as the creative fatigued. With nothing diverse next to it in the auction, Meta could not rotate to alternatives.</p>
+            <ul class="bullet-list" style="margin: 0;">
+                <li><strong>Tekst 2 - Video Carolien je post je suf</strong> took €4,235 of the €4,827 LTO 22 budget</li>
+                <li>Frequency, CTR and CPM all stable across the fatigue period, so this is relevance drift, not classic burn</li>
+                <li>New ABO with fresh talking heads launched 28 April, first read due Tuesday 5 May</li>
+            </ul>
+        </div>
+
+        <div class="info-card warning">
+            <div class="card-label">Constraint 2 | Secondary</div>
+            <h4>Wrong Audience on AI Storytelling</h4>
+            <p style="font-size: 13.5px; color: #cbd5e0; line-height: 1.6; margin-bottom: 16px;">Lead quality flagged by Nienke. Webshop owners and pre-launch buyers are clicking through and buying the €7 product, but they will never convert to the high-ticket backend. CPP at €23.81 is 1.7x over the new €14 ceiling because the audience is not service-based entrepreneurs.</p>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>Webshops segment confirmed as a lead-quality contaminant</li>
+                <li>Pre-launch buyers without paying clients are not the BFF avatar</li>
+                <li>Triple-filter approach goes live this week, detailed on slide 4</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero-block" style="margin-top: 24px;">
+        <div class="card-label" style="color: #F39C12; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 14px;">The strategic implication</div>
+        <h3 style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.5em; margin-bottom: 14px; color: #ffffff;">More budget without more creatives drives CPP up, not purchases.</h3>
+        <p style="color: #cbd5e0; font-size: 14.5px; line-height: 1.65;">Carolien's talking heads consistently drive 80 to 96% of purchases across every campaign on the account. The hero ads in April were 30V_TH_Algoritme on Boost & Convert (€27.27 blended CPP across 3 ad sets) and Video 2 on 30 Posts (€17.50 CPP for 70 purchases). Both were single creatives carrying the weight. Without a steady refresh cadence behind them, every campaign eventually walks into the LTO 22 incumbent lock pattern. The May plan is built around feeding the auction with diverse creative continuously.</p>
+    </div>
+
+    <div class="three-column" style="margin-top: 22px;">
+        <div class="info-card success">
+            <div class="card-label">Hero | Boost & Convert</div>
+            <h4 style="margin-bottom: 8px;">30V_TH_Algoritme</h4>
+            <p style="font-size: 13px; color: #cbd5e0;">€1,337 spend across 3 ad sets, 49 purchases at €27.27 blended CPP. Already inside the 1.5x ceiling at €40.50.</p>
+        </div>
+        <div class="info-card success">
+            <div class="card-label">Hero | 30 Posts Workshop</div>
+            <h4 style="margin-bottom: 8px;">Video 2</h4>
+            <p style="font-size: 13px; color: #cbd5e0;">€1,225 spend, 70 purchases at €17.50 CPP. Carried the campaign from launch to workshop close.</p>
+        </div>
+        <div class="info-card warning">
+            <div class="card-label">Replacement Needed</div>
+            <h4 style="margin-bottom: 8px;">LTO 22 New ABO</h4>
+            <p style="font-size: 13px; color: #cbd5e0;">10 fresh Carolien talking heads in flight. First read Tuesday 5 May. Static 3 already moved across.</p>
+        </div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 4: WEBSHOPS EXCLUSION STRATEGY ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Audience Quality Strategy</span>
+            <div class="slide-number">04 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">Lead quality, not just lead volume</div>
+    <h2 class="section-title">The <span class="accent">Webshops Exclusion</span> Triple Filter</h2>
+    <p class="section-lede">Meta does not let us exclude buyers by life stage, so the qualifier has to live in three layers. Each layer filters out the segments that buy the LTO but never reach the high-ticket backend. Volume will dip slightly. Quality will rise materially.</p>
+
+    <div class="step-flow" style="margin-bottom: 22px;">
+        <div class="step-flow-item">
+            <div class="step-id">L1</div>
+            <div class="step-content">
+                <h5>Layer 1: Meta-Level Audience Exclusions</h5>
+                <p>Add interest-based and behavioural exclusions directly inside the Advantage+ ad sets. Pairs with the Advantage+ targeting suggestions to keep delivery focused on Dutch and Belgian service-based entrepreneurs.</p>
+                <div style="margin-top: 10px;">
+                    <span class="filter-chip exclude">Exclude: Ecommerce</span>
+                    <span class="filter-chip exclude">Exclude: Shopify</span>
+                    <span class="filter-chip exclude">Exclude: WooCommerce</span>
+                    <span class="filter-chip exclude">Exclude: Online retail</span>
+                    <span class="filter-chip exclude">Exclude: Webshop owner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-flow-item">
+            <div class="step-id">L2</div>
+            <div class="step-content">
+                <h5>Layer 2: Hook-Level Self-Selection in Ad Copy</h5>
+                <p>The first three seconds of every video and the first line of every primary text qualifies the audience before they click. Pre-launch buyers without paying clients self-select out before they cost us a click.</p>
+                <div style="margin-top: 10px;">
+                    <span class="filter-chip">Voor coaches en consultants</span>
+                    <span class="filter-chip">Service-based ondernemers</span>
+                    <span class="filter-chip">Met betalende klanten</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-flow-item">
+            <div class="step-id">L3</div>
+            <div class="step-content">
+                <h5>Layer 3: Lookalike Source Hygiene</h5>
+                <p>Lookalike audiences are built from buyer lists that include the wrong segments today. Cleaned source lists go in this week, then we regenerate the lookalikes manually since Meta does not auto-refresh them when the source updates.</p>
+                <div style="margin-top: 10px;">
+                    <span class="filter-chip">High-ticket buyers only</span>
+                    <span class="filter-chip">Repeat LTO purchasers</span>
+                    <span class="filter-chip">Sales call show-ups</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column">
+        <div class="info-card info">
+            <div class="card-label">Where the filter lives by campaign</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li><strong>AI Storytelling:</strong> all 3 layers, this is the worst-affected campaign</li>
+                <li><strong>LTO 22:</strong> all 3 layers, since it shares the same audience pool</li>
+                <li><strong>Boost & Convert:</strong> Layer 1 plus existing copy already qualifies well</li>
+                <li><strong>Viral Reels:</strong> Layer 1 only, audience is already converting cleanly</li>
+                <li><strong>21 May 1-5 method workshop:</strong> all 3 layers from day one of launch</li>
+            </ul>
+        </div>
+
+        <div class="info-card accent">
+            <div class="card-label">The trade and why it is right</div>
+            <p style="font-size: 14px; color: #e2e8f0; line-height: 1.6; margin-bottom: 12px;">Volume will dip 10 to 15% on AI Storytelling and possibly LTO 22 in the first two weeks. Backend sales close rate from those leads should rise enough to offset the front-end dip several times over.</p>
+            <p style="font-size: 14px; color: #e2e8f0; line-height: 1.6;"><strong style="color: #F39C12;">Per Nienke:</strong> the trade off is worth it if we get better at selling the backend programmes. The new salesteam needs cleaner leads to ramp on, not more leads.</p>
+        </div>
+    </div>
+
+    <div class="key-call-out">
+        <div class="label">Implementation timing</div>
+        <div class="text">All three layers go live across AI Storytelling and LTO 22 by Friday 8 May. Boost & Convert and Viral Reels updated by Monday 11 May. Lookalike rebuild begins once cleaned source lists are confirmed with Carolien on the call this week.</div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 5: MAY WORKSHOP CALENDAR ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>May Calendar</span>
+            <div class="slide-number">05 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">The week-by-week plan</div>
+    <h2 class="section-title">May 2026 <span class="accent">Workshop & Campaign</span> Schedule</h2>
+    <p class="section-lede">Two paid workshops anchor the month. Boost & Convert on 7 May is the volume driver. The 21 May 1-5 method workshop is the new launch. The always-on portfolio fills the gaps and absorbs scaled budget.</p>
+
+    <div class="three-column">
+        <div class="month-card may-week">
+            <div class="month-header">Week 1<span class="pill">4 May - 10 May</span></div>
+            <div class="month-sub">Boost & Convert Launch Week</div>
+            <div class="calendar-row workshop">
+                <strong>Thu 7 May | Boost & Convert Workshop</strong>
+                <span class="meta">€27 | Carolien live | Forecast 95-115 purchases</span>
+            </div>
+            <div class="calendar-row lto">
+                <strong>LTO 22 New ABO Read</strong>
+                <span class="meta">First scaling decision Tuesday 5 May</span>
+            </div>
+            <div class="calendar-row creative">
+                <strong>Webshops Filter Goes Live</strong>
+                <span class="meta">All 3 layers across AI Storytelling & LTO 22 by Fri 8 May</span>
+            </div>
+            <div style="margin-top: 14px; padding: 12px; background: rgba(243, 156, 18, 0.08); border: 1px solid rgba(243, 156, 18, 0.25); border-radius: 8px; font-size: 12.5px;">
+                <strong style="color: #F39C12;">Daily budget:</strong> €280/day on B&C<br>
+                <strong style="color: #F39C12;">Week 1 target:</strong> 110-130 purchases
+            </div>
+        </div>
+
+        <div class="month-card may-week">
+            <div class="month-header">Week 2<span class="pill">11 May - 17 May</span></div>
+            <div class="month-sub">Stabilise & Refresh</div>
+            <div class="calendar-row creative">
+                <strong>Carolien Talking Heads Wave 2</strong>
+                <span class="meta">Filming for Viral Reels & LTO 22 refresh</span>
+            </div>
+            <div class="calendar-row lto">
+                <strong>LTO 22 ABO Scaling Decision</strong>
+                <span class="meta">If new TH ads inside €44 ceiling, scale 20%</span>
+            </div>
+            <div class="calendar-row workshop">
+                <strong>21 May Workshop Build</strong>
+                <span class="meta">Salespage + scripts from Carolien needed by 14 May</span>
+            </div>
+            <div style="margin-top: 14px; padding: 12px; background: rgba(243, 156, 18, 0.08); border: 1px solid rgba(243, 156, 18, 0.25); border-radius: 8px; font-size: 12.5px;">
+                <strong style="color: #F39C12;">Daily budget:</strong> €350-400/day blended<br>
+                <strong style="color: #F39C12;">Week 2 target:</strong> 90-100 purchases
+            </div>
+        </div>
+
+        <div class="month-card may-week">
+            <div class="month-header">Week 3<span class="pill">18 May - 24 May</span></div>
+            <div class="month-sub">1-5 Method Launch</div>
+            <div class="calendar-row workshop">
+                <strong>Thu 21 May | 1-5 Method Workshop</strong>
+                <span class="meta">New launch | 5 day runway | Conservative forecast 50-70</span>
+            </div>
+            <div class="calendar-row lto">
+                <strong>Brand Refresh Roll-Out</strong>
+                <span class="meta">Duplicate winners and rebrand the copies</span>
+            </div>
+            <div class="calendar-row creative">
+                <strong>Viral Reels Wave 2 Live</strong>
+                <span class="meta">New TH videos in dedicated ABO ad set</span>
+            </div>
+            <div style="margin-top: 14px; padding: 12px; background: rgba(243, 156, 18, 0.08); border: 1px solid rgba(243, 156, 18, 0.25); border-radius: 8px; font-size: 12.5px;">
+                <strong style="color: #F39C12;">Daily budget:</strong> €450/day blended<br>
+                <strong style="color: #F39C12;">Week 3 target:</strong> 110-130 purchases
+            </div>
+        </div>
+
+        <div class="month-card may-week">
+            <div class="month-header">Week 4<span class="pill">25 May - 31 May</span></div>
+            <div class="month-sub">Scale Winners, Close Month</div>
+            <div class="calendar-row lto">
+                <strong>Always-On Scaling</strong>
+                <span class="meta">LTO 22, Viral Reels, AI Storytelling on proven creatives</span>
+            </div>
+            <div class="calendar-row creative">
+                <strong>June Workshop Briefs</strong>
+                <span class="meta">Confirm June calendar with Carolien</span>
+            </div>
+            <div class="calendar-row workshop">
+                <strong>Month-End Performance Review</strong>
+                <span class="meta">400 purchase verdict, June scaling decisions</span>
+            </div>
+            <div style="margin-top: 14px; padding: 12px; background: rgba(243, 156, 18, 0.08); border: 1px solid rgba(243, 156, 18, 0.25); border-radius: 8px; font-size: 12.5px;">
+                <strong style="color: #F39C12;">Daily budget:</strong> €450-500/day<br>
+                <strong style="color: #F39C12;">Week 4 target:</strong> 80-100 purchases
+            </div>
+        </div>
+
+        <div class="month-card may-week" style="grid-column: span 2; border-top-color: #69F0AE;">
+            <div class="month-header" style="color: #69F0AE;">May Total Targets<span class="pill" style="background: rgba(105, 240, 174, 0.15); border-color: rgba(105, 240, 174, 0.4); color: #69F0AE;">Roll-Up</span></div>
+            <div class="month-sub">All campaigns combined</div>
+            <div class="grid-4" style="margin-top: 8px;">
+                <div class="compact-stat">
+                    <div class="label">Total Spend</div>
+                    <div class="value">€11.5k</div>
+                </div>
+                <div class="compact-stat">
+                    <div class="label">Paid Purchases</div>
+                    <div class="value" style="color: #69F0AE;">400+</div>
+                </div>
+                <div class="compact-stat">
+                    <div class="label">Blended CPP</div>
+                    <div class="value">€28-30</div>
+                </div>
+                <div class="compact-stat">
+                    <div class="label">Buffer Vs Apr</div>
+                    <div class="value" style="color: #69F0AE;">+5%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 6: TACTICAL ROADMAP BY CAMPAIGN ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Per-Campaign Tactical Plan</span>
+            <div class="slide-number">06 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">The actual moves</div>
+    <h2 class="section-title">Tactical Roadmap <span class="accent">Per Campaign</span></h2>
+    <p class="section-lede">Each of the six core campaigns gets a specific play. The May target distribution adds up to 400 with a 10 to 20 purchase buffer. Every play has a CPR ceiling and a kill threshold.</p>
+
+    <div class="perf-table">
+        <table>
+            <colgroup>
+                <col style="width: 17%;">
+                <col style="width: 11%;">
+                <col style="width: 11%;">
+                <col style="width: 12%;">
+                <col style="width: 11%;">
+                <col style="width: 38%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Campaign</th>
+                    <th>April CPP</th>
+                    <th>2x Ceiling</th>
+                    <th>May Target</th>
+                    <th>Daily Budget</th>
+                    <th>Tactical Move</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Boost & Convert (€27)</td>
+                    <td class="num-good">€40.71</td>
+                    <td>€54</td>
+                    <td><strong style="color: #69F0AE;">110 purch</strong></td>
+                    <td>€280/day</td>
+                    <td style="text-align: left; font-size: 13px;">Hold €280 through 7 May workshop, scale 20% increments daily if CPR holds under €54, swap in 3 of 5 new TH videos as Algoritme fatigues</td>
+                </tr>
+                <tr>
+                    <td>LTO 22 (€22)</td>
+                    <td class="num-bad">€66.13</td>
+                    <td>€44</td>
+                    <td><strong style="color: #69F0AE;">90 purch</strong></td>
+                    <td>€140/day</td>
+                    <td style="text-align: left; font-size: 13px;">Drive volume through new ABO with 10 fresh TH videos, kill any ad above €44 within 48 hours, retire incumbent fully once 3 alternatives are proven</td>
+                </tr>
+                <tr>
+                    <td>Viral Reels (€17)</td>
+                    <td class="num-good">€23.53</td>
+                    <td>€34</td>
+                    <td><strong style="color: #69F0AE;">85 purch</strong></td>
+                    <td>€80/day</td>
+                    <td style="text-align: left; font-size: 13px;">Break Interest Stack out of CBO into standalone ABO at €25/day, slot in 5 new TH videos in dedicated ad set, scale Broad if blended CPR holds</td>
+                </tr>
+                <tr>
+                    <td>AI Storytelling (€7)</td>
+                    <td class="num-bad">€23.81</td>
+                    <td>€14</td>
+                    <td><strong style="color: #69F0AE;">45 purch</strong></td>
+                    <td>€30/day</td>
+                    <td style="text-align: left; font-size: 13px;">Apply triple filter from slide 4 first, hold on Ad-V7 plus add Ad-V6 and Ad-V8 once filters are live, only scale once CPR settles inside €14</td>
+                </tr>
+                <tr>
+                    <td>21 May 1-5 Method (price TBC)</td>
+                    <td>-</td>
+                    <td>TBC</td>
+                    <td><strong style="color: #69F0AE;">55 purch</strong></td>
+                    <td>€150/day</td>
+                    <td style="text-align: left; font-size: 13px;">Build from Boost & Convert proven structure once Carolien delivers salespage and scripts, 5 day runway from launch to workshop, daily monitoring required</td>
+                </tr>
+                <tr>
+                    <td>LTO Testing (€22)</td>
+                    <td class="num-warn">€51.61</td>
+                    <td>€44</td>
+                    <td><strong style="color: #69F0AE;">25 purch</strong></td>
+                    <td>€40/day</td>
+                    <td style="text-align: left; font-size: 13px;">Pure incubator, only fresh creatives, 3 day kill threshold at €44, winners promoted to LTO 22 main on day 4 with carry-over copy</td>
+                </tr>
+                <tr class="totals">
+                    <td>May Roll-Up</td>
+                    <td>€38.33</td>
+                    <td>-</td>
+                    <td><strong>410 purch</strong></td>
+                    <td>€720/day</td>
+                    <td style="text-align: left;">10 purchase buffer above 400 target, €11.5k monthly spend, 28-30 blended CPP target</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="two-column">
+        <div class="info-card success">
+            <div class="card-label">What hitting 400 actually requires</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>LTO 22 recovers from 73 to 90 purchases via the new ABO replacing the fatigued incumbent</li>
+                <li>Boost & Convert delivers the May 7 workshop within forecast at the 1.5x ceiling</li>
+                <li>Viral Reels holds CPP under €34 through the Wave 2 creative refresh</li>
+                <li>21 May new launch lands at least 50 purchases on a 5 day runway</li>
+            </ul>
+        </div>
+        <div class="info-card warning">
+            <div class="card-label">What could derail it</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>New LTO 22 talking heads underperform the incumbent and we need a creative round 2</li>
+                <li>Boost & Convert workshop forecast misses the 95 floor due to compressed runway</li>
+                <li>Webshops filter cuts AI Storytelling volume harder than 15% in the first two weeks</li>
+                <li>21 May salespage and scripts slip past 14 May, compressing the runway below 5 days</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 7: CREATIVE PIPELINE ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Creative Pipeline</span>
+            <div class="slide-number">07 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">Solving the binding constraint</div>
+    <h2 class="section-title">The <span class="accent">Creative Supply</span> Pipeline</h2>
+    <p class="section-lede">The plan to feed the auction with diverse creative every week of May. Carolien talking heads remain the engine. Carousels and statics back from design fill out the diversity. Brand refresh integrates without resetting learning.</p>
+
+    <div class="arrow-flow">
+        <div class="arrow-step">
+            <div class="step-num">Stage 01 | This Week</div>
+            <h4>Filming Wave 2</h4>
+            <p>Carolien recording fresh talking heads for Boost & Convert and Viral Reels. AI Storytelling and Boost & Convert scripts already delivered.</p>
+        </div>
+        <div class="arrow-divider">→</div>
+        <div class="arrow-step">
+            <div class="step-num">Stage 02 | 11-17 May</div>
+            <h4>Edit & Subtitle</h4>
+            <p>Kateryna edits with subtitle corrections from Carolien's review applied. Dutch language fixes from Nienke baked in at copy level.</p>
+        </div>
+        <div class="arrow-divider">→</div>
+        <div class="arrow-step">
+            <div class="step-num">Stage 03 | 18-24 May</div>
+            <h4>Launch & Test</h4>
+            <p>Duplicate winning ads, swap video only to preserve learning. New ABO ad sets at €20-25/day to give fresh assets fair delivery.</p>
+        </div>
+        <div class="arrow-divider">→</div>
+        <div class="arrow-step">
+            <div class="step-num">Stage 04 | 25-31 May</div>
+            <h4>Promote Winners</h4>
+            <p>Move proven creatives into main campaigns with carry-over copy. Retire fatigued incumbents. Brief June filming wave.</p>
+        </div>
+    </div>
+
+    <div class="two-column" style="margin-top: 22px;">
+        <div class="info-card accent">
+            <div class="card-label">Creative inventory in flight</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li><strong>5 AI Storytelling scripts</strong> filmed and edited, Ad-V7 in main rotation</li>
+                <li><strong>5 Viral Reels scripts</strong> filmed and edited, ready for Wave 2 ad set</li>
+                <li><strong>5 LTO 22 scripts</strong> filmed and edited, in new ABO since 28 April</li>
+                <li><strong>5 Boost & Convert scripts</strong> in production this week with Carolien</li>
+                <li><strong>4 carousels and 4 statics</strong> back from design, Dutch language corrections applied</li>
+            </ul>
+        </div>
+
+        <div class="info-card info">
+            <div class="card-label">Brand refresh integration plan</div>
+            <p style="font-size: 14px; color: #e2e8f0; margin-bottom: 12px;">The new Groeihelden brand identity rolls out in two weeks. The integration plan protects learning on every winning ad.</p>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>Duplicate every winning ad first, do not edit in place</li>
+                <li>Apply rebrand to the duplicates, original keeps running</li>
+                <li>A/B test old versus new for 5 days at equal budget</li>
+                <li>Promote whichever wins, retire the other cleanly</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="key-call-out" style="margin-top: 20px;">
+        <div class="label">The naming convention discipline</div>
+        <div class="text">Every new asset follows Campaign_TH_HookKeyword_Format. This is non-negotiable, because creative-level reporting only works when names parse cleanly. Example: LTO22_TH_JePostJeSuf_9x16. Brief documents already use this. The deck Carolien delivers from filming this week will use the same.</div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 8: BUDGET FRAMEWORK & CPR GUARDRAILS ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Budget & CPR Guardrails</span>
+            <div class="slide-number">08 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">The discipline that protects the algorithm</div>
+    <h2 class="section-title">Budget Framework & <span class="accent">CPR Guardrails</span></h2>
+    <p class="section-lede">The new salesteam transition means CPR discipline matters more than ever. The 2x ceiling is the floor of the contract. Growing toward 1.5x is the longer arc. Every scaling move respects Meta's learning phase.</p>
+
+    <div class="perf-table">
+        <table>
+            <colgroup>
+                <col style="width: 24%;">
+                <col style="width: 13%;">
+                <col style="width: 13%;">
+                <col style="width: 13%;">
+                <col style="width: 13%;">
+                <col style="width: 24%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Breakeven</th>
+                    <th>1.5x Target</th>
+                    <th>2x Ceiling</th>
+                    <th>3x Hard Kill</th>
+                    <th>Action at Ceiling</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AI Storytelling (€7)</td>
+                    <td>€7</td>
+                    <td class="num-good">€10.50</td>
+                    <td class="num-warn">€14</td>
+                    <td class="num-bad">€21</td>
+                    <td style="text-align: left; font-size: 13px;">Pause ad, re-evaluate audience filter</td>
+                </tr>
+                <tr>
+                    <td>30 Posts Workshop (€11)</td>
+                    <td>€11</td>
+                    <td class="num-good">€16.50</td>
+                    <td class="num-warn">€22</td>
+                    <td class="num-bad">€33</td>
+                    <td style="text-align: left; font-size: 13px;">Pause ad, refresh creative</td>
+                </tr>
+                <tr>
+                    <td>Viral Reels Hooks (€17)</td>
+                    <td>€17</td>
+                    <td class="num-good">€25.50</td>
+                    <td class="num-warn">€34</td>
+                    <td class="num-bad">€51</td>
+                    <td style="text-align: left; font-size: 13px;">Pause ad, rotate to Wave 2</td>
+                </tr>
+                <tr>
+                    <td>LTO 22 (€22)</td>
+                    <td>€22</td>
+                    <td class="num-good">€33</td>
+                    <td class="num-warn">€44</td>
+                    <td class="num-bad">€66</td>
+                    <td style="text-align: left; font-size: 13px;">Pause ad, trigger ABO rotation</td>
+                </tr>
+                <tr>
+                    <td>Boost & Convert (€27)</td>
+                    <td>€27</td>
+                    <td class="num-good">€40.50</td>
+                    <td class="num-warn">€54</td>
+                    <td class="num-bad">€81</td>
+                    <td style="text-align: left; font-size: 13px;">Hold budget, refresh hero ad</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="three-column">
+        <div class="info-card success">
+            <div class="card-label">Safe Scaling Zone</div>
+            <h4>15-20% Increments</h4>
+            <p style="font-size: 13px; color: #cbd5e0;">The default movement. Every 3-4 days after stable CPR. Example: €280 to €340 to €400 to €480. Risk to learning phase is minimal.</p>
+        </div>
+        <div class="info-card warning">
+            <div class="card-label">Caution Zone</div>
+            <h4>25-30% Increments</h4>
+            <p style="font-size: 13px; color: #cbd5e0;">Only on campaigns with 14 plus days of stable history. Expect 24-48 hour CPR adjustment as Meta rebalances. Monitor daily.</p>
+        </div>
+        <div class="info-card danger">
+            <div class="card-label">Avoid Zone</div>
+            <h4>40%+ Single Move</h4>
+            <p style="font-size: 13px; color: #cbd5e0;">Triggers full learning phase reset. CPR can spike 50-100% temporarily. Only acceptable when duplicating into a fresh ad set.</p>
+        </div>
+    </div>
+
+    <div class="key-call-out">
+        <div class="label">The non-negotiables</div>
+        <div class="text">Daily budgets only, never lifetime budgets on cold campaigns. Duplicate and swap video to introduce new creatives, never overwrite a winner. Maximum 20-25% budget increment in a single move. Pause any ad above the 2x ceiling within 48 hours unless inside a planned learning window.</div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 9: KPI DASHBOARD ====================== -->
+<div class="slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>KPI Dashboard</span>
+            <div class="slide-number">09 / 10</div>
+        </div>
+    </div>
+
+    <div class="section-kicker">How we measure success in May</div>
+    <h2 class="section-title">The <span class="accent">400 Purchase</span> Scorecard</h2>
+    <p class="section-lede">Six KPIs decide whether May is a hit. Each has a current April baseline, a May target, and a daily or weekly cadence. Anything in the red zone triggers a tactical move within 48 hours.</p>
+
+    <div class="perf-table">
+        <table>
+            <colgroup>
+                <col style="width: 24%;">
+                <col style="width: 16%;">
+                <col style="width: 16%;">
+                <col style="width: 14%;">
+                <col style="width: 14%;">
+                <col style="width: 16%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>KPI</th>
+                    <th>April Actual</th>
+                    <th>May Target</th>
+                    <th>Cadence</th>
+                    <th>Trigger</th>
+                    <th>Owner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Paid purchases (workshops + LTOs)</td>
+                    <td>381</td>
+                    <td class="num-good">400+</td>
+                    <td>Daily</td>
+                    <td>Below pace by 10%</td>
+                    <td>Charles</td>
+                </tr>
+                <tr>
+                    <td>Blended CPP</td>
+                    <td>€38.33</td>
+                    <td class="num-good">€28-30</td>
+                    <td>Daily</td>
+                    <td>Above €33</td>
+                    <td>Charles</td>
+                </tr>
+                <tr>
+                    <td>LTO 22 CPP (recovery KPI)</td>
+                    <td class="num-bad">€66.13</td>
+                    <td class="num-good">Below €44</td>
+                    <td>Daily</td>
+                    <td>Above €44 for 48h</td>
+                    <td>Charles</td>
+                </tr>
+                <tr>
+                    <td>AI Storytelling lead quality</td>
+                    <td class="num-bad">Mixed</td>
+                    <td class="num-good">Service-based only</td>
+                    <td>Weekly</td>
+                    <td>Webshops in lead list</td>
+                    <td>Charles + Nienke</td>
+                </tr>
+                <tr>
+                    <td>Active creatives per main campaign</td>
+                    <td>1-2</td>
+                    <td class="num-good">5+</td>
+                    <td>Weekly</td>
+                    <td>Below 3</td>
+                    <td>Charles + Carolien</td>
+                </tr>
+                <tr>
+                    <td>Workshop signup forecast accuracy</td>
+                    <td>Within 15%</td>
+                    <td class="num-good">Within 10%</td>
+                    <td>Per workshop</td>
+                    <td>Off by 20%+</td>
+                    <td>Charles</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="two-column">
+        <div class="info-card success">
+            <div class="card-label">May Success Definition</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li><strong>400+ paid purchases</strong> across the workshop and LTO portfolio</li>
+                <li><strong>Blended CPP at or below €30</strong>, inside the new salesteam economics</li>
+                <li><strong>LTO 22 fully recovered</strong> at sub-€44 CPP on the new ABO</li>
+                <li><strong>Webshops segment cleared</strong> from AI Storytelling lead flow</li>
+                <li><strong>5+ active creatives per main campaign</strong> by month-end</li>
+                <li><strong>Boost & Convert and 1-5 Method</strong> both inside forecast ranges</li>
+            </ul>
+        </div>
+
+        <div class="info-card accent">
+            <div class="card-label">Reporting cadence to client</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li><strong>Monday:</strong> weekly focus message, constraint diagnosis, plan</li>
+                <li><strong>Wednesday:</strong> midweek check-in on early performance signals</li>
+                <li><strong>Friday:</strong> end-of-week wrap, performance numbers, learnings</li>
+                <li><strong>Workshop days:</strong> campaigns paused before 10:00, post-workshop summary by EOD</li>
+                <li><strong>Month-end:</strong> full May review with June scaling plan</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-4" style="margin-top: 20px;">
+        <div class="compact-stat">
+            <div class="label">Forecast Range Low</div>
+            <div class="value" style="color: #FFB74D;">390</div>
+            <div class="delta trend-neutral">Just under target</div>
+        </div>
+        <div class="compact-stat">
+            <div class="label">Forecast Mid</div>
+            <div class="value" style="color: #69F0AE;">410</div>
+            <div class="delta trend-up">Target hit + buffer</div>
+        </div>
+        <div class="compact-stat">
+            <div class="label">Forecast High</div>
+            <div class="value" style="color: #69F0AE;">435</div>
+            <div class="delta trend-up">Stretch outcome</div>
+        </div>
+        <div class="compact-stat">
+            <div class="label">Confidence Level</div>
+            <div class="value" style="color: #F39C12;">Medium-High</div>
+            <div class="delta trend-neutral">Pending creative delivery</div>
+        </div>
+    </div>
+
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+
+<!-- ====================== SLIDE 10: SUMMARY & NEXT STEPS ====================== -->
+<div class="slide closing-slide">
+    <div class="slide-header">
+        <div class="brand">
+            <div class="brand-mark">G</div>
+            <div class="brand-name">GROEI<span>HELDEN</span></div>
+        </div>
+        <div class="slide-meta">
+            <span>Summary & Next Steps</span>
+            <div class="slide-number">10 / 10</div>
+        </div>
+    </div>
+
+    <div class="closing-mark">G</div>
+
+    <div class="section-kicker">Closing</div>
+    <h2 class="main-title" style="font-size: 2.6em;">Hitting 400 is a <span class="accent">Creative Problem</span> Solved with <span class="accent">Discipline</span></h2>
+    <p class="subtitle" style="margin-bottom: 28px;">Not a budget problem. Every play in this deck is built on the same diagnosis. Feed the auction with diverse creative, exclude the audience segments that distort the funnel, scale only when CPR holds. Hit 400 paid purchases without breaching the 2x ceiling.</p>
+
+    <div class="three-column">
+        <div class="info-card success">
+            <div class="card-label">This Week | 4-10 May</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>Boost & Convert workshop 7 May, all eyes on CPR</li>
+                <li>LTO 22 new ABO first read Tuesday 5 May</li>
+                <li>Webshops triple filter live by Friday 8 May</li>
+                <li>Carolien recording Wave 2 talking heads</li>
+            </ul>
+        </div>
+
+        <div class="info-card info">
+            <div class="card-label">Mid Month | 11-24 May</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>21 May 1-5 Method workshop launch and execution</li>
+                <li>Wave 2 talking heads into Viral Reels and LTO 22</li>
+                <li>Brand refresh integration via duplicated winners</li>
+                <li>Mid-month performance review and reforecast</li>
+            </ul>
+        </div>
+
+        <div class="info-card accent">
+            <div class="card-label">Month End | 25-31 May</div>
+            <ul class="bullet-list" style="margin: 0;">
+                <li>Scale proven winners across all main campaigns</li>
+                <li>Final 400 verdict and end-of-month review</li>
+                <li>June workshop calendar locked with Carolien</li>
+                <li>Q2 planning continuation into June and July</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero-block" style="margin-top: 24px;">
+        <div class="card-label" style="color: #F39C12; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 14px;">Open dependencies on the client side</div>
+        <div class="two-column" style="gap: 22px;">
+            <div>
+                <h4 style="font-family: 'Fraunces', serif; font-size: 1.1em; color: #F39C12; margin-bottom: 10px;">From Carolien</h4>
+                <ul class="bullet-list" style="margin: 0;">
+                    <li>Wave 2 talking head footage for Boost & Convert and Viral Reels by 14 May</li>
+                    <li>21 May 1-5 method salespage and brief by 14 May</li>
+                    <li>Confirmation on June workshop calendar by 28 May</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-family: 'Fraunces', serif; font-size: 1.1em; color: #F39C12; margin-bottom: 10px;">From Nienke (after holiday)</h4>
+                <ul class="bullet-list" style="margin: 0;">
+                    <li>Brand refresh assets, fonts, colours, logo files when ready</li>
+                    <li>Cleaned high-ticket buyer list for lookalike rebuild</li>
+                    <li>Sign-off on the new Dutch copy variants in flight with design</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="key-call-out" style="margin-top: 24px;">
+        <div class="label">Next conversation</div>
+        <div class="text">Walk through this roadmap on the call with Carolien this week. Align on Wave 2 filming priority, confirm the 21 May workshop scope, lock the May execution plan. Nienke catches up on return from holiday with mid-month reforecast already in hand.</div>
+    </div>
+
+    <div style="margin-top: auto; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #a0aec0; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+        <span>Charles Piper | Heath Media | charles@heathmedia</span>
+        <span style="color: #F39C12; font-weight: 600;">Roadmap to 400 | May 2026</span>
+    </div>
+    <div class="footer-tag">Confidential | Groeihelden x Heath Media</div>
+</div>
+
+</body>
+</html>
